@@ -21,7 +21,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integers",
     "category": "page",
-    "text": "CurrentModule = Oscar"
+    "text": "CurrentModule = Oscarusing Oscar"
 },
 
 {
@@ -29,7 +29,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integers",
     "category": "section",
-    "text": "An important design decision in Oscar.jl is to use Julia as the user language by default. This means that integers typed at the REPL are Julia integers.For performance reasons, Oscar has its own integer format. These are entered using the ZZ constructor.a = ZZ(2)^100For convenience, many Oscar functions also accept Julia integers as inputs by converting them to Oscar integers, especially if they do not fit in a machine word. For example:R, x = ZZ[\"x\"] # create a polynomial ring over the integers\nf = 2xIn this example, 2 is a Julia integer but is still valid in the call to the Oscar polynomial multiplication function that is implicit in the expression 2x.note: Note\nIn Julia, `2^64` will return `0`, as the Julia integer `2` is a machine\nword. In Oscar, the expression `ZZ(2)^64` will return the expected\nresult (and as an Oscar integer). In general, Oscar can only do an\nautomatic conversion to an Oscar integer if the Julia integer is\ncombined with another Oscar expression, or passed to an Oscar function.In the following, unless stated otherwise, when we refer to integers, we mean Oscar integers. When we refer to an Int we mean the Julia Int.note: Note\nThe Julia `Int` type is either a 32 or 64 bit integer, depending on\nthe machine architecture (usually 64 bits on most modern machines). The\nrange of values is machine dependent, but can be found by typing\n`typemin(Int)` and `typemax(Int)` in Julia.Oscar integers have the same limitations as GMP multiprecision integers, namely that they are limited by the available memory on the machine and in any case to signed integers whose absolute value does not exceed 2^37 binary bits."
+    "text": "An important design decision in Oscar.jl is to use Julia as the user language by default. This means that integers typed at the REPL are Julia integers.For performance reasons, Oscar has its own integer format. These are entered using the ZZ constructor.a = ZZ(2)^100For convenience, many Oscar functions also accept Julia integers as inputs by converting them to Oscar integers, especially if they do not fit in a machine word. For example:divexact(ZZ(234), 2)In this example, 2 is a Julia integer but is still valid in the call to divexact because the first argument is an Oscar integer.In general, Oscar can only automatically convert from Julia integers to Oscar integers if they are combined with other Oscar objects or passed to Oscar functions.Oscar integers have the same limitations as GMP multiprecision integers, namely that they are limited by the available memory on the machine and in any case to signed integers whose absolute value does not exceed 2^37 binary bits.In the following, unless stated otherwise, when we refer to integers, we mean Oscar integers. When we refer to an Int we mean the Julia Int.note: Note\nThe Julia Int type is either a 32 or 64 bit integer, depending on    the machine architecture (usually 64 bits on most modern machines). The    range of values is machine dependent, but can be found by typing    typemin(Int) and typemax(Int) in Julia."
 },
 
 {
@@ -53,7 +53,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Powering",
     "category": "section",
-    "text": "Powering of integers is performed using the caret operator ^. The exponent can be any Julia Int.ZZ(37)^37\nZZ(1)^(-2)note: Note\nAn exception will be raised if an integer outside the range\n    ``[-1, 1]`` is raised to a negative exponent.The following is allowed for convenience.ZZ(0)^0"
+    "text": "Powering of integers is performed using the caret operator ^. The exponent can be any Julia Int.ZZ(37)^37\nZZ(1)^(-2)note: Note\nAn exception will be raised if an integer outside the range\n    ``[-1, 1]`` is raised to a negative exponent.The following is allowed for convenience.ZZ(0)^0note: Note\nIn Julia, `2^64` will return `0`, as the Julia integer `2` is a machine\nword. In Oscar, the expression `ZZ(2)^64` will return the expected\nresult."
 },
 
 ]}
