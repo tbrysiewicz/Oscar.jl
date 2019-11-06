@@ -29,7 +29,31 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integers",
     "category": "section",
-    "text": "An important design decision in Oscar.jl is to use Julia as the user language by default. This means that integers typed at the REPL are Julia integers.For performance reasons, Oscar has its own integer format. These are entered using the ZZ constructor.a = ZZ(2)^100For convenience, many Oscar functions also accept Julia integers as inputs by converting them to Oscar integers, especially if they do not fit in a machine word. For example:divexact(ZZ(234), 2)In this example, 2 is a Julia integer but is still valid in the call to divexact because the first argument is an Oscar integer.In general, Oscar can only automatically convert from Julia integers to Oscar integers if they are combined with other Oscar objects or passed to Oscar functions.Oscar integers have the same limitations as GMP multiprecision integers, namely that they are limited by the available memory on the machine and in any case to signed integers whose absolute value does not exceed 2^37 binary bits.In the following, unless stated otherwise, when we refer to integers, we mean Oscar integers. When we refer to an Int we mean the Julia Int.note: Note\nThe Julia \'Int\' type is either a 32 or 64 bit integer, depending on themachine architecture (usually 64 bits on most modern machines). The range of    values is machine dependent, but can be found by typing \'typemin(Int)\' and    \'typemax(Int)\' in Julia."
+    "text": "An important design decision in Oscar.jl is to use Julia as the user language by default. This means that integers typed at the REPL are Julia integers."
+},
+
+{
+    "location": "integer.html#Constructors-1",
+    "page": "Integers",
+    "title": "Constructors",
+    "category": "section",
+    "text": "For performance reasons, Oscar has its own integer format. These are entered using the ZZ constructor.a = ZZ(2)^100"
+},
+
+{
+    "location": "integer.html#Julia-integers-in-Oscar-functions-1",
+    "page": "Integers",
+    "title": "Julia integers in Oscar functions",
+    "category": "section",
+    "text": "For convenience, many Oscar functions also accept Julia integers as inputs by converting them to Oscar integers. For example:divexact(ZZ(234), 2)In this example, 2 is a Julia integer but is still valid in the call to divexact because the first argument is an Oscar integer.In general, Oscar can only automatically convert from Julia integers to Oscar integers if they are combined with other Oscar objects or passed to Oscar functions."
+},
+
+{
+    "location": "integer.html#Limitations-1",
+    "page": "Integers",
+    "title": "Limitations",
+    "category": "section",
+    "text": "Oscar integers have the same limitations as GMP multiprecision integers, namely that they are limited by the available memory on the machine and in any case to signed integers whose absolute value does not exceed 2^37 binary bits.In the following, unless stated otherwise, when we refer to integers, we mean Oscar integers. When we refer to an Int we mean the Julia Int.note: Note\nThe Julia \'Int\' type is either a 32 or 64 bit integer, depending on the machine architecture (usually 64 bits on most modern machines). The range of values is machine dependent, but can be found by typing \'typemin(Int)\' and \'typemax(Int)\' in Julia."
 },
 
 {
@@ -37,15 +61,23 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Basic arithmetic",
     "category": "section",
-    "text": "Oscar provides the basic arithmetic operations +, - and * for integers."
+    "text": "Oscar provides the basic arithmetic operations +, - and *, and division and powering as described below."
 },
 
 {
-    "location": "integer.html#Division-1",
+    "location": "integer.html#Division-in-Oscar-1",
     "page": "Integers",
-    "title": "Division",
+    "title": "Division in Oscar",
     "category": "section",
-    "text": "Oscar distinguishes a number of different kinds of division:Exact division (divexact)\nEuclidean division (div, divrem, rem)\nConstruction of fractions (a//b)\nFloating point division (a/b)\nReciprocals (inv)\nDivisibility testing (divides)These choices have been made for maximum parsimony with the Julia language.note: Note\nIt is a common error to enter \'1/2\' for the fraction one half in Julia. In the Julia language, this expression is reserved for floating point division. Instead, the double slash operator is used for fractions.Here we discuss only exact division and inversion/reciprocals. Euclidean division and divisibility testing are discussed below, floating point division is not defined for Oscar integers to avoid confusion, and fractions are discussed on the page for rational numbers.The result of the exact division of two integers will always be another integer. Exact division raises an exception if the division is not exact, or if division by zero is attempted.divexact(ZZ(6), ZZ(3))\ndivexact(ZZ(6), ZZ(0))\ndivexact(ZZ(6), ZZ(5))"
+    "text": "Oscar distinguishes a number of different kinds of division:Exact division (divexact)\nEuclidean division (div, divrem, mod, rem)\nConstruction of fractions (a//b)\nFloating point division (a/b)\nDivisibility testing (divides)These choices have been made for maximum parsimony with the Julia language.note: Note\nIt is a common error to enter \'1/2\' for the fraction \'one half\' in Julia. In the Julia language, this expression is reserved for floating point division. Instead, the double slash operator is used for fractions."
+},
+
+{
+    "location": "integer.html#Exact-Division-1",
+    "page": "Integers",
+    "title": "Exact Division",
+    "category": "section",
+    "text": "The result of the exact division of two integers will always be another integer. Exact division raises an exception if the division is not exact, or if division by zero is attempted.divexact(ZZ(6), ZZ(3))\ndivexact(ZZ(6), ZZ(0))\ndivexact(ZZ(6), ZZ(5))"
 },
 
 {
