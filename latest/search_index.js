@@ -21,7 +21,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integers",
     "category": "page",
-    "text": "CurrentModule = Oscarusing Oscar"
+    "text": "CurrentModule = Oscarusing Oscar   [Pages = [\"integers.md\"]"
 },
 
 {
@@ -61,7 +61,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Basic arithmetic",
     "category": "section",
-    "text": "Oscar provides the basic arithmetic operations +, - and *, including mixed operations between Julia and Oscar integers. It also provides division and powering as described below."
+    "text": "Oscar provides the basic arithmetic operations +, - and * and comparison operators ==, !=, <, <=, >, >=, including mixed operations between Julia and Oscar integers. It also provides division and powering as described below."
 },
 
 {
@@ -93,7 +93,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Euclidean division",
     "category": "section",
-    "text": "The ring of integers is a Euclidean domain and Oscar provides Euclidean division.The divrem function returns both quotient and remainder, whilst div returns just the quotient and mod returns just the remainder.The remainder is taken to be the least non-negative residue, i.e. if a and m are integers, Euclidean division in Oscar finds a quotient q and remainder r such that a = qm + r where 0 leq r  m.q, r = divrem(ZZ(5), ZZ(-3))\nq = div(ZZ(7), ZZ(2)\nr = mod(ZZ(4), ZZ(3)"
+    "text": "The ring of integers is a Euclidean domain and Oscar provides Euclidean division.The divrem function returns both quotient and remainder, whilst div returns just the quotient and mod returns just the remainder.The remainder is taken to be the least non-negative residue, i.e. if a and m are integers, Euclidean division in Oscar finds a quotient q and remainder r such that a = qm + r where 0 leq r  m.q, r = divrem(ZZ(5), ZZ(-3))\nq = div(ZZ(7), ZZ(2)\nr = mod(ZZ(4), ZZ(3)note: Note\nThe results of divrem, div and mod do not agree with their namesakes in Julia when the modulus m is negative."
 },
 
 {
