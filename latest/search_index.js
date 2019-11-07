@@ -37,7 +37,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Constructors",
     "category": "section",
-    "text": "Oscar integers are created using the ZZ constructor.ZZ(2)^100\nZZ(618970019642690137449562111)The following special constructors are also provided:zero(ZZ) : the integer 0                                                             * one(ZZ) : the integer 1"
+    "text": "Oscar integers are created using the ZZ constructor.ZZ(2)^100\nZZ(618970019642690137449562111)The following special constructors are also provided:zero(ZZ) : the integer 0\none(ZZ) : the integer 1"
 },
 
 {
@@ -57,9 +57,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Basic-functionality-1",
+    "location": "integer.html#Predicates-and-properties-1",
     "page": "Integers",
-    "title": "Basic functionality",
+    "title": "Predicates and properties",
     "category": "section",
     "text": "The following predicates are provided, which return true or false:iszero(n) : n = 0\nisone(n) : n = 1\nisunit(n) : n = pm 1The following properties can also be computed:sign(n) returns the sign of n, i.e. nn if n neq 0 or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
 },
