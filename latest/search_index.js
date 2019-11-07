@@ -41,14 +41,6 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Julia-integers-in-Oscar-functions-1",
-    "page": "Integers",
-    "title": "Julia integers in Oscar functions",
-    "category": "section",
-    "text": "For convenience, many Oscar functions also accept Julia integers. For example:divexact(ZZ(234), 2)In this example, 2 is a Julia integer but is still valid in the call to the Oscar function divexact.In general, Oscar can only automatically convert from Julia integers to Oscar integers if they are combined with other Oscar objects or passed to Oscar functions."
-},
-
-{
     "location": "integer.html#Limitations-1",
     "page": "Integers",
     "title": "Limitations",
@@ -57,11 +49,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "integer.html#Julia-integers-in-Oscar-functions-1",
+    "page": "Integers",
+    "title": "Julia integers in Oscar functions",
+    "category": "section",
+    "text": "For convenience, many Oscar functions also accept Julia integers. For example:divexact(ZZ(234), 2)In this example, 2 is a Julia integer but is still valid in the call to the Oscar function divexact.In general, Oscar can only automatically convert from Julia integers to Oscar integers if they are combined with other Oscar objects or passed to Oscar functions."
+},
+
+{
     "location": "integer.html#Basic-functionality-1",
     "page": "Integers",
     "title": "Basic functionality",
     "category": "section",
-    "text": "Oscar provides the following basic functions for the ring of integers:zero(ZZ) - return the integer 0\none(ZZ) - return the integer 1There are also the following predicates for integers n:iszero(n) - n = 0\nisone(n) - n = 1\nisunit(n) - n = pm 1The following functions are also provided.sign(n) returns the sign of n, i.e. nn if n neq 0 or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
+    "text": "Oscar provides the following basic functions for the ring of integers:zero(ZZ) - return the integer 0\none(ZZ) - return the integer 1There are also the following predicates for integers n which return true or false:iszero(n) - n = 0\nisone(n) - n = 1\nisunit(n) - n = pm 1The following functions are also provided.sign(n) returns the sign of n, i.e. nn if n neq 0 or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
 },
 
 {
