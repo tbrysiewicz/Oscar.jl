@@ -21,7 +21,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integers",
     "category": "page",
-    "text": "CurrentModule = Oscarusing Oscar   [Pages = [\"integers.md\"]"
+    "text": "CurrentModule = Oscarusing OscarPages = [\"integers.md\"]"
 },
 
 {
@@ -54,6 +54,14 @@ var documenterSearchIndex = {"docs": [
     "title": "Limitations",
     "category": "section",
     "text": "Oscar integers have the same limitations as GMP multiprecision integers, namely that they are limited by the available memory on the machine and in any case to signed integers whose absolute value does not exceed 2^37 bits.note: Note\nThe Julia \'Int\' type is either a 32 or 64 bit integer, depending on the machine architecture (usually 64 bits on most modern machines). The range of values is machine dependent, but can be found by typing \'typemin(Int)\' and \'typemax(Int)\' in Julia."
+},
+
+{
+    "location": "integer.html#Basic-functionality-1",
+    "page": "Integers",
+    "title": "Basic functionality",
+    "category": "section",
+    "text": "Oscar provides the following basic functions for the ring of integers:zero(ZZ) - return the integer 0\none(ZZ) - return the integer 1There are also the following predicates for integers n:iszero(n) - true iff n == 1\nisone(n) - true iff n == 0\nisunit(n) - true iff n = pmThe following additional functions are also provided.The call sign(n) returns the sign of n, i.e.mboxsign(n) = begincases*-1 mboxif n  0\n0 mboxif n = 0\n1 mboxif n  0endcases*sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
 },
 
 {
