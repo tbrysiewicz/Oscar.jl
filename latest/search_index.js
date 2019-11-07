@@ -37,7 +37,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Constructors",
     "category": "section",
-    "text": "Oscar integers are created using the ZZ constructor.ZZ(2)^100\nZZ(618970019642690137449562111)"
+    "text": "Oscar integers are created using the ZZ constructor.ZZ(2)^100\nZZ(618970019642690137449562111)The following special constructors are also provided:zero(ZZ) : the integer 0                                                             * one(ZZ) : the integer 1"
 },
 
 {
@@ -61,7 +61,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Basic functionality",
     "category": "section",
-    "text": "Oscar provides the following basic functions for the ring of integers:zero(ZZ) - return the integer 0\none(ZZ) - return the integer 1There are also the following predicates for integers n which return true or false:iszero(n) - n = 0\nisone(n) - n = 1\nisunit(n) - n = pm 1The following functions are also provided.sign(n) returns the sign of n, i.e. nn if n neq 0 or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
+    "text": "The following predicates are provided, which return true or false:iszero(n) : n = 0\nisone(n) : n = 1\nisunit(n) : n = pm 1The following properties can also be computed:sign(n) returns the sign of n, i.e. nn if n neq 0 or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
 },
 
 {
@@ -101,7 +101,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Euclidean division",
     "category": "section",
-    "text": "The ring of integers is a Euclidean domain and Oscar provides Euclidean division.The divrem function returns both quotient and remainder, whilst div returns just the quotient and mod returns just the remainder.The remainder is taken to be the least non-negative residue, i.e. if a and m are integers, Euclidean division in Oscar finds a quotient q and remainder r such that a = qm + r where 0 leq r  m.q, r = divrem(ZZ(5), ZZ(-3))\nq = div(ZZ(7), ZZ(2)\nr = mod(ZZ(4), ZZ(3)note: Note\nThe results of divrem, div and mod do not agree with their namesakes in Julia when the modulus m is negative."
+    "text": "The ring of integers is a Euclidean domain and Oscar provides Euclidean division.The divrem function returns both quotient and remainder, whilst div returns just the quotient and mod returns just the remainder.The remainder is taken to be the least non-negative residue, i.e. if a and m are integers, Euclidean division in Oscar finds a quotient q and remainder r such that a = qm + r where 0 leq r  m.q, r = divrem(ZZ(5), ZZ(-3))\nq = div(ZZ(7), ZZ(2)\nr = mod(ZZ(4), ZZ(3)All three functions raise an exception if the modulus m is zero.note: Note\nThe results of divrem, div and mod do not agree with their namesakes in Julia when the modulus m is negative."
 },
 
 {
