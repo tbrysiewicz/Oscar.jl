@@ -29,7 +29,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integers",
     "category": "section",
-    "text": "An important design decision in Oscar.jl is to use Julia as the user language by default. This means that integers typed at the REPL are Julia integers. However, for performance reasons, Oscar has its own integer format.In the following, unless stated otherwise, when we refer to integers, we mean Oscar integers. When we refer to an Int we mean the Julia Int."
+    "text": "An important design decision in Oscar.jl is to use Julia as the user language by default. This means that integers typed at the REPL are Julia integers. However, for performance reasons, Oscar has its own integer format.In the following, unless stated otherwise, when we refer to integers we mean Oscar integers; when we refer to an Int we mean the Julia Int."
 },
 
 {
@@ -53,7 +53,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Limitations",
     "category": "section",
-    "text": "Oscar integers have the same limitations as GMP multiprecision integers, namely that they are limited by the available memory on the machine and in any case to signed integers whose absolute value does not exceed 2^37 binary bits.note: Note\nThe Julia \'Int\' type is either a 32 or 64 bit integer, depending on the machine architecture (usually 64 bits on most modern machines). The range of values is machine dependent, but can be found by typing \'typemin(Int)\' and \'typemax(Int)\' in Julia."
+    "text": "Oscar integers have the same limitations as GMP multiprecision integers, namely that they are limited by the available memory on the machine and in any case to signed integers whose absolute value does not exceed 2^37 bits.note: Note\nThe Julia \'Int\' type is either a 32 or 64 bit integer, depending on the machine architecture (usually 64 bits on most modern machines). The range of values is machine dependent, but can be found by typing \'typemin(Int)\' and \'typemax(Int)\' in Julia."
 },
 
 {
@@ -61,7 +61,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Basic arithmetic",
     "category": "section",
-    "text": "Oscar provides the basic arithmetic operations +, - and *, and division and powering as described below."
+    "text": "Oscar provides the basic arithmetic operations +, - and *, including mixed operations between Julia and Oscar integers. It also provides division and powering as described below."
 },
 
 {
@@ -73,7 +73,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Exact-Division-1",
+    "location": "integer.html#integer_exact_division-1",
     "page": "Integers",
     "title": "Exact Division",
     "category": "section",
@@ -86,6 +86,22 @@ var documenterSearchIndex = {"docs": [
     "title": "Powering",
     "category": "section",
     "text": "Powering of integers is performed using the caret operator ^. The exponent can be any Julia Int.ZZ(37)^37\nZZ(1)^(-2)note: Note\nAn exception will be raised if an integer outside the range [-1, 1] is raised to a negative exponent.The following is allowed for convenience.ZZ(0)^0note: Note\nIn Julia, \'2^64\' will return 0, as the Julia integer 2 is a machine word. In Oscar, the expression \'ZZ(2)^64\' will return the expected result."
+},
+
+{
+    "location": "integer.html#integer_euclidean_division-1",
+    "page": "Integers",
+    "title": "Euclidean division",
+    "category": "section",
+    "text": "The ring of integers is a Euclidean domain and Oscar provides Euclidean division.The divrem function returns both quotient and remainder, whilst div returns just the quotient and mod returns just the remainder.The remainder is taken to be the least non-negative residue, i.e. if a and m are integers, Euclidean division in Oscar finds a quotient q and remainder r such that a = qm + r where 0 leq r  m.q, r = divrem(ZZ(5), ZZ(-3))\nq = div(ZZ(7), ZZ(2)\nr = mod(ZZ(4), ZZ(3)"
+},
+
+{
+    "location": "integer.html#integer_divisibility_testing-1",
+    "page": "Integers",
+    "title": "Divisibility testing",
+    "category": "section",
+    "text": "In Oscar, we say that b divides a if there exists c in the same ring such that a = bc.The call divides(a, b) returns a tuple (flag, q) where flag is either true if b divides a and q is a quotient, or false if b does not divide a and q is an integer whose value is not defined.divides(ZZ(6), ZZ(3))\ndivides(ZZ(5), ZZ(2))Note that for convenience we define:divides(ZZ(0), ZZ(0))"
 },
 
 ]}
