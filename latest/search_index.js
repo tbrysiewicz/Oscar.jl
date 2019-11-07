@@ -21,7 +21,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integers",
     "category": "page",
-    "text": "CurrentModule = Oscarusing OscarPages = [\"integers.md\"]"
+    "text": "CurrentModule = Oscarusing OscarPages = [\"integer.md\"]"
 },
 
 {
@@ -61,7 +61,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Basic functionality",
     "category": "section",
-    "text": "Oscar provides the following basic functions for the ring of integers:zero(ZZ) - return the integer 0\none(ZZ) - return the integer 1There are also the following predicates for integers n:iszero(n) - n = 0\nisone(n) - n = 1\nisunit(n) - n = pm 1The following functions are also provided.sign(n) returns the sign of n, i.e. nn if n neq 0 or0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
+    "text": "Oscar provides the following basic functions for the ring of integers:zero(ZZ) - return the integer 0\none(ZZ) - return the integer 1There are also the following predicates for integers n:iszero(n) - n = 0\nisone(n) - n = 1\nisunit(n) - n = pm 1The following functions are also provided.sign(n) returns the sign of n, i.e. nn if n neq 0 or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
 },
 
 {
