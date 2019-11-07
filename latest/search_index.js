@@ -37,7 +37,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Constructors",
     "category": "section",
-    "text": "Oscar integers are created using the ZZ constructor.ZZ(2)^100"
+    "text": "Oscar integers are created using the ZZ constructor.ZZ(2)^100\nZZ(618970019642690137449562111)"
 },
 
 {
