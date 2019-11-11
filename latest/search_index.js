@@ -112,4 +112,12 @@ var documenterSearchIndex = {"docs": [
     "text": "Divisibility testing is performed using the divides function.In Oscar, we say that b divides a if there exists c in the same ring such that a = bc.The call divides(a, b) returns a tuple (flag, q) where flag is either true if b divides a in which case q will be a quotient, or flag is false if b does not divide a and q will be an integer whose value is not defined.divides(ZZ(6), ZZ(3))\ndivides(ZZ(5), ZZ(2))Note that for convenience we define:divides(ZZ(0), ZZ(0))"
 },
 
+{
+    "location": "integer.html#Conversions-1",
+    "page": "Integers",
+    "title": "Conversions",
+    "category": "section",
+    "text": "Oscar integers can be converted to Julia Int\'s and BigInt\'s in the usual Julia way:n = ZZ(123)\nInt(n)\nBigInt(n)If the Oscar integer is too large to fit in an Int, an exception is raised.Int(ZZ(12348732648732648763274868732687324))The fits function can be used to determine whether an Oscar integer will fit in a Julia Int:fits(Int, ZZ(12348732648732648763274868732687324))"
+},
+
 ]}
