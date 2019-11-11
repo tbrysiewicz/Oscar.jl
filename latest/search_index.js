@@ -37,7 +37,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Constructors",
     "category": "section",
-    "text": "Oscar integers are created using the ZZ constructor.ZZ(2)^100\nZZ(618970019642690137449562111)The following special constructors are also provided:zero(ZZ) : the integer 0\none(ZZ) : the integer 1"
+    "text": "Oscar integers are created using the ZZ constructor.ZZ(2)^100\nZZ(618970019642690137449562111)One can also construct the zero integer with the empty constructor:ZZ()The following special constructors are also provided:zero(ZZ) : the integer 0\none(ZZ) : the integer 1"
 },
 
 {
@@ -53,7 +53,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Julia integers in Oscar functions",
     "category": "section",
-    "text": "For convenience, many Oscar functions also accept Julia integers. For example:divexact(ZZ(234), 2)In this example, 2 is a Julia integer but is still valid in the call to the Oscar function divexact.In general, Oscar can only automatically convert from Julia integers to Oscar integers if they are combined with other Oscar objects or passed to Oscar functions."
+    "text": "For convenience, basic arithmetic and exact division functions in Oscar also accept Julia integers. For example:divexact(ZZ(234), 2)In this example, 2 is a Julia integer but is still valid in the call to the Oscar function divexact."
 },
 
 {
@@ -61,7 +61,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Predicates and properties",
     "category": "section",
-    "text": "The following predicates are provided, which return true or false:iszero(n) : n = 0\nisone(n) : n = 1\nisunit(n) : n = pm 1The following properties can also be computed:sign(n) returns the sign of n, i.e. nn if n neq 0 or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
+    "text": "The following predicates are provided, which return true or false:iszero(n) : n = 0\nisone(n) : n = 1\nisunit(n) : n = pm 1The following properties can also be computed:sign(n) returns the sign of n, i.e. nn if n neq 0 or 0 otherwise. The return value is a Julia Int.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
 },
 
 {
@@ -93,7 +93,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Powering",
     "category": "section",
-    "text": "Powering of integers is performed using the caret operator ^. The exponent can be any Julia Int.ZZ(37)^37\nZZ(1)^(-2)note: Note\nAn exception will be raised if an integer outside the range [-1, 1] is raised to a negative exponent.The following is allowed for convenience.ZZ(0)^0note: Note\nIn Julia, \'2^64\' will return 0, as the Julia integer 2 is a machine word. In Oscar, the expression \'ZZ(2)^64\' will return the expected result."
+    "text": "Powering of integers is performed using the caret operator ^. The exponent can be any Julia Int.ZZ(37)^37\nZZ(1)^(-2)note: Note\nAn exception will be raised if an integer other than -1 or 1 is raised to a negative exponent.The following is allowed for convenience.ZZ(0)^0note: Note\nIn Julia, \'2^64\' will return 0, as the Julia integer 2 is a machine word. In Oscar, the expression \'ZZ(2)^64\' will return the expected result."
 },
 
 {
@@ -101,7 +101,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Euclidean division",
     "category": "section",
-    "text": "The ring of integers is a Euclidean domain and Oscar provides Euclidean division.The divrem function returns both quotient and remainder, whilst div returns just the quotient and mod returns just the remainder.The remainder is taken to be the least non-negative residue, i.e. if a and m are integers, Euclidean division in Oscar finds a quotient q and remainder r such that a = qm + r where 0 leq r  m.q, r = divrem(ZZ(5), ZZ(-3))\nq = div(ZZ(7), ZZ(2)\nr = mod(ZZ(4), ZZ(3)All three functions raise an exception if the modulus m is zero.note: Note\nThe results of divrem, div and mod do not agree with their namesakes in Julia when the modulus m is negative."
+    "text": "The ring of integers is a Euclidean domain and Oscar provides Euclidean division.In a Euclidean domain in Oscar the divrem function returns both quotient and remainder, div returns just the quotient and rem returns just the remainder.Euclidean division of a by n computes a quotient and remainder such thata = qn + rwhere r  n. For conformity with Julia, when r neq 0 the sign of r will be the same as the sign of a.It is often convenient to have Euclidean remainder with r and n having the same sign, so that if n  0 the remainder is non-negative. For this we have mod.remainder division sign rounding\nrem div/divrem same as dividend towards zero\nmod  same as divisor towards -inftyq, r = divrem(ZZ(5), ZZ(3))\nq = div(ZZ(7), ZZ(2)\nr = mod(ZZ(4), ZZ(3)All three functions raise an exception if the modulus m is zero."
 },
 
 {
