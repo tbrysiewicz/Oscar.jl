@@ -33,11 +33,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Constructors-1",
+    "location": "integer.html#The-ring-of-integers-1",
     "page": "Integers",
-    "title": "Constructors",
+    "title": "The ring of integers",
     "category": "section",
-    "text": "Oscar integers are created using the ZZ constructor.ZZ(2)^100\nZZ(618970019642690137449562111)One can also construct the zero integer with the empty constructor:ZZ()The following special constructors are also provided:zero(ZZ) : the integer 0\none(ZZ) : the integer 1"
+    "text": "Every object in Oscar representing a mathematical element has a parent. This is an object encoding information about where that element belongs.The parent of an Oscar integer is the ring of integers ZZ.ZZ\nR = parent(ZZ(2))\nR == ZZ"
+},
+
+{
+    "location": "integer.html#Integer-constructors-1",
+    "page": "Integers",
+    "title": "Integer constructors",
+    "category": "section",
+    "text": "Oscar integers are created using ZZ:ZZ(2)^100\nZZ(618970019642690137449562111)One can also construct the zero integer with the empty constructor:ZZ()The following special constructors are also provided:zero(ZZ) : the integer 0\none(ZZ) : the integer 1"
 },
 
 {
@@ -61,7 +69,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Predicates and properties",
     "category": "section",
-    "text": "The following predicates are provided, which return true or false:iszero(n) : n = 0\nisone(n) : n = 1\nisunit(n) : n = pm 1\nissquare(n)\nisprime(n)\nisprobable_prime(n)The isprime predicate will prove primality, whereas isprobable_prime may declare a composite number to be prime with very low probability.Negative numbers, 0 and 1 are not considered prime by these predicates.The following properties can also be computed:sign(n) returns the sign of n, i.e. nn if n neq 0 or 0 otherwise. The return value is a Julia Int.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))Every object in Oscar representing a mathematical element has a parent. This is an object encoding information about where that element belongs.The parent of an Oscar integer is the ring of integers ZZ.R = parent(ZZ(2))\nR == ZZ"
+    "text": "The following predicates are provided, which return true or false:iszero(n) : n = 0\nisone(n) : n = 1\nisunit(n) : n = pm 1\nissquare(n)\nisprime(n)\nisprobable_prime(n)The isprime predicate will prove primality, whereas isprobable_prime may declare a composite number to be prime with very low probability.Negative numbers, 0 and 1 are not considered prime by these predicates.The following properties can also be computed:sign(n) returns the sign of n, i.e. nn if n neq 0 or 0 otherwise. The return value is a Julia Int.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
 },
 
 {
@@ -113,9 +121,9 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#GCD-and-LCM-1",
+    "location": "integer.html#Gcd-and-lcm-1",
     "page": "Integers",
-    "title": "GCD and LCM",
+    "title": "Gcd and lcm",
     "category": "section",
     "text": "The gcd function returns the greatest common divisor of its inputs, which is by definition the largest integer dividing the two inputs unless both inputs are zero in which case it returns zero. The result will always be non-negative and will only be zero if both inputs are zero.gcd(ZZ(34), ZZ(17))\ngcd(ZZ(3), ZZ(0))The lcm function returns the least positive multiple of its inputs, unless one or more of its inputs is zero, in which case it returns zero.lcm(ZZ(6), ZZ(21))\nlcm(ZZ(0), ZZ(0))note: Note\nThe identity gcd(m n)mathrmlcm(m n) = mn does not hold for the definition that Oscar uses, unless both m and n are the same sign or one of them is zero.Both gcd and lcm accept Julia Int\'s for one of their arguments."
 },
