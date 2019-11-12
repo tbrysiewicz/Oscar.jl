@@ -113,6 +113,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "integer.html#GCD-and-LCM-1",
+    "page": "Integers",
+    "title": "GCD and LCM",
+    "category": "section",
+    "text": "The gcd function returns the greatest common divisor of its inputs, which is by definition the largest integer dividing the two inputs. The result will always be non-negative and will only be zero if both inputs are zero.gcd(ZZ(34), ZZ(17))\ngcd(ZZ(3), ZZ(0))The lcm function returns the least positive multiple of its inputs, unless one or more of its inputs is zero, in which case it returns zero.lcm(ZZ(6), ZZ(21))\nlcm(ZZ(0), ZZ(0))note: Note\nThe identity gcd(m n)lcm(m n) = mn does not hold for the definition that Oscar uses, unless both m and n are the same sign or one of them is zero."
+},
+
+{
     "location": "integer.html#Conversions-1",
     "page": "Integers",
     "title": "Conversions",
