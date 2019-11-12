@@ -144,4 +144,12 @@ var documenterSearchIndex = {"docs": [
     "text": "Oscar integers can be converted to Julia Int\'s and BigInt\'s in the usual Julia way:n = ZZ(123)\nInt(n)\nBigInt(n)If the Oscar integer is too large to fit in an Int, an exception is raised.Int(ZZ(12348732648732648763274868732687324))The fits function can be used to determine whether an Oscar integer will fit in a Julia Int:fits(Int, ZZ(12348732648732648763274868732687324))"
 },
 
+{
+    "location": "integer.html#Factorisation-1",
+    "page": "Integers",
+    "title": "Factorisation",
+    "category": "section",
+    "text": "Factorisation of nonzero integers is provided by the factor function.factor(ZZ(-6000361807272228723606))\nfactor(ZZ(0))The unit (pm 1) can be accessed via the unit function:F = factor(ZZ(-12))\nunit(F)Once created, a factorisation is iterable:F = factor(ZZ(-60))\nfor (p, e) in F; println(\"$p^$e\"); endThe pairs (p, e) represent the prime power factors p^e of the non-unit part of the factorisation. They can be placed in an array using collect:F = factor(ZZ(-60))\ncollect(F)One can also determine whether a given prime is in the non-unit part of a factorisation and if so return its exponent. If the exponent of a prime that is not in a factorisation is requested, an exception is raised.For convenience, a Julia Int can be used instead of an Oscar integer for this functionality.F = factor(ZZ(-60))\n5 in F\nZZ(3) in F\n7 in F\nF[3]\nF[ZZ(7)]"
+},
+
 ]}
