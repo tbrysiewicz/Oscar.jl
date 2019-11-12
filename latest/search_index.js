@@ -53,7 +53,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Julia integers in Oscar functions",
     "category": "section",
-    "text": "For convenience, basic arithmetic and exact division functions in Oscar also accept Julia integers. For example:divexact(ZZ(234), 2)In this example, 2 is a Julia integer but is still valid in the call to the Oscar function divexact."
+    "text": "For convenience, basic arithmetic and exact division functions in Oscar also accept Julia integers. For example:divexact(ZZ(234), 2)In this example, 2 is a Julia integer but is still valid in the call to the Oscar function divexact.A number of other integer functions also accept Julia Int\'s, as noted below."
 },
 
 {
@@ -101,7 +101,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Euclidean division",
     "category": "section",
-    "text": "The ring of integers is a Euclidean domain and Oscar provides Euclidean division.In a Euclidean domain in Oscar the divrem function returns both quotient and remainder, div returns just the quotient and rem returns just the remainder.For integers, Euclidean division of a by n computes a quotient and remainder such thata = qn + rwhere r  n. For conformity with Julia, when r neq 0 the sign of r will be the same as the sign of a.If one instead wants Euclidean remainder with r and n having the same sign, one can use mod. Then if n  0 the remainder will be non-negative.remainder division sign rounding\nrem div/divrem same as dividend towards zero\nmod  same as divisor towards -inftyq, r = divrem(ZZ(5), ZZ(3))\nq = div(ZZ(7), ZZ(2))\nr = mod(ZZ(4), ZZ(3))All three functions raise an exception if the modulus m is zero.note: Note\nThe rem function does not provide a minimal set of representatives, e.g. rem(-2, 3) = -2 but rem(1, 3) = 1."
+    "text": "The ring of integers is a Euclidean domain and Oscar provides Euclidean division.In a Euclidean domain in Oscar the divrem function returns both quotient and remainder, div returns just the quotient and rem returns just the remainder.For integers, Euclidean division of a by n computes a quotient and remainder such thata = qn + rwhere r  n. For conformity with Julia, when r neq 0 the sign of r will be the same as the sign of a.If one instead wants Euclidean remainder with r and n having the same sign, one can use mod. Then if n  0 the remainder will be non-negative.remainder division sign rounding\nrem div/divrem same as dividend towards zero\nmod  same as divisor towards -inftyq, r = divrem(ZZ(5), ZZ(3))\nq = div(ZZ(7), ZZ(2))\nr = mod(ZZ(4), ZZ(3))All three functions raise an exception if the modulus m is zero.note: Note\nThe rem function does not provide a minimal set of representatives, e.g. rem(-2, 3) = -2 but rem(1, 3) = 1.All integer Euclidean division functions accept a Julia Int for one of their arguments."
 },
 
 {
@@ -117,7 +117,15 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "GCD and LCM",
     "category": "section",
-    "text": "The gcd function returns the greatest common divisor of its inputs, which is by definition the largest integer dividing the two inputs. The result will always be non-negative and will only be zero if both inputs are zero.gcd(ZZ(34), ZZ(17))\ngcd(ZZ(3), ZZ(0))The lcm function returns the least positive multiple of its inputs, unless one or more of its inputs is zero, in which case it returns zero.lcm(ZZ(6), ZZ(21))\nlcm(ZZ(0), ZZ(0))note: Note\nThe identity gcd(m n)lcm(m n) = mn does not hold for the definition that Oscar uses, unless both m and n are the same sign or one of them is zero."
+    "text": "The gcd function returns the greatest common divisor of its inputs, which is by definition the largest integer dividing the two inputs unless both inputs are zero in which case it returns zero. The result will always be non-negative and will only be zero if both inputs are zero.gcd(ZZ(34), ZZ(17))\ngcd(ZZ(3), ZZ(0))The lcm function returns the least positive multiple of its inputs, unless one or more of its inputs is zero, in which case it returns zero.lcm(ZZ(6), ZZ(21))\nlcm(ZZ(0), ZZ(0))note: Note\nThe identity gcd(m n)lcm(m n) = mn does not hold for the definition that Oscar uses, unless both m and n are the same sign or one of them is zero.Both gcd and lcm accept Julia Int\'s for one of their arguments."
+},
+
+{
+    "location": "integer.html#Roots-1",
+    "page": "Integers",
+    "title": "Roots",
+    "category": "section",
+    "text": "Julia and Oscar distinguish two kinds of square root:Integer square root (isqrt)\nFloating point square root (sqrt)The isqrt function returns the floor of the square root of its argument, i.e. the largest integer whose square does not exceed its input. An exception is raised if a negative input is passed.isqrt(ZZ(16))\nisqrt(ZZ(0))\nisqrt(ZZ(5))\nisqrt(ZZ(-3))If the remainder is also required, there is the isqrtrem function. It returns a tuple (s, r) such that s is the same as the return value of the isqrt function and s^2 + r is equal to the input.isqrtrem(ZZ(16))\nisqrtrem(ZZ(5))The function root(a, n) will return the value of largest absolute value whose n-th power does not exceed a. When n is even, a must be non-negative and the return value will always be non-negative. The value of a may be negative if n is negative. The value n must always be a positive Julia Int.root(ZZ(16), 4)\nroot(ZZ(5), 2)\nroot(ZZ(-5), 3)\nroot(ZZ(0), 4)\nroot(ZZ(-5), 2)\nroot(ZZ(12), -2)"
 },
 
 {
