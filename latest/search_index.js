@@ -133,7 +133,23 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Greatest common divisor",
     "category": "section",
-    "text": "gcd(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.IntegerOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Returns the greatest common divisor of its inputs, which is by definition the largest integer dividing the two inputs, unless both inputs are zero in which case it returns zero. The result will always be non-negative and will only be zero if both inputs are zero.gcd(ZZ(34), ZZ(17))\ngcd(ZZ(3), ZZ(0))lcm(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.IntegerOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Returns the least common multiple of a and b. This is the least positive multiple of a and b, unless a = 0 or b = 0 which case we define the least common multiple to be zero.lcm(ZZ(6), ZZ(21))\nlcm(ZZ(0), ZZ(0))note: Note\nThe identity gcd(m n)mathrmlcm(m n) = mn does not hold for the definition that Oscar uses, unless both m and n are the same sign or one of them is zero."
+    "text": ""
+},
+
+{
+    "location": "integer.html#Greatest-common-divisor-2",
+    "page": "Integers",
+    "title": "Greatest common divisor",
+    "category": "section",
+    "text": "gcd(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.IntegerOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Returns the greatest common divisor of its inputs, which is by definition the largest integer dividing the two inputs, unless both inputs are zero in which case it returns zero. The result will always be non-negative and will only be zero if both inputs are zero.gcd(ZZ(34), ZZ(17))\ngcd(ZZ(3), ZZ(0))"
+},
+
+{
+    "location": "integer.html#Least-common-multiple-1",
+    "page": "Integers",
+    "title": "Least common multiple",
+    "category": "section",
+    "text": "lcm(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.IntegerOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Returns the least common multiple of a and b. This is the least positive multiple of a and b, unless a = 0 or b = 0 which case we define the least common multiple to be zero.lcm(ZZ(6), ZZ(21))\nlcm(ZZ(0), ZZ(0))note: Note\nThe identity gcd(m n)mathrmlcm(m n) = mn does not hold for the definition that Oscar uses, unless both m and n are the same sign or one of them is zero."
 },
 
 {
@@ -141,7 +157,23 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Roots",
     "category": "section",
-    "text": "Julia and Oscar distinguish two kinds of square root:Integer square root (isqrt)\nFloating point square root (sqrt)We describe only the first of these here.isqrt(n::Oscar.Integer) -> Oscar.IntegerReturns the floor of the square root of its argument, i.e. the largest integer whose square does not exceed its input. An exception is raised if a negative input is passed.isqrt(ZZ(16))\nisqrt(ZZ(0))\nisqrt(ZZ(5))\nisqrt(ZZ(-3))isqrtrem(n::Oscar.Integer) -> (Oscar.Integer, Oscar.Integer)Returns the tuple (s, r) such that s is equal to isqrt(n) and n = s^2 + r.isqrtrem(ZZ(16))\nisqrtrem(ZZ(5))root(a::Oscar.Integer, n::Base.Int) -> Oscar.IntegerReturns the value r of largest absolute value such that r^n leq a. When a is a perfect n-th power, the return value will be an n-th root of a.When n is even, the non-negative root is always returned. An exception is raised if n leq 0 or if n is even and a  0.root(ZZ(16), 4)\nroot(ZZ(5), 2)\nroot(ZZ(-5), 3)\nroot(ZZ(0), 4)\nroot(ZZ(-5), 2)\nroot(ZZ(12), -2)"
+    "text": ""
+},
+
+{
+    "location": "integer.html#Square-roots-1",
+    "page": "Integers",
+    "title": "Square roots",
+    "category": "section",
+    "text": "Julia and Oscar distinguish two kinds of square root:Integer square root (isqrt)\nFloating point square root (sqrt)We describe only the first of these here.isqrt(n::Oscar.Integer) -> Oscar.IntegerReturns the floor of the square root of its argument, i.e. the largest integer whose square does not exceed its input. An exception is raised if a negative input is passed.isqrt(ZZ(16))\nisqrt(ZZ(0))\nisqrt(ZZ(5))\nisqrt(ZZ(-3))isqrtrem(n::Oscar.Integer) -> (Oscar.Integer, Oscar.Integer)Returns the tuple (s, r) such that s is equal to isqrt(n) and n = s^2 + r.isqrtrem(ZZ(16))\nisqrtrem(ZZ(5))"
+},
+
+{
+    "location": "integer.html#General-roots-1",
+    "page": "Integers",
+    "title": "General roots",
+    "category": "section",
+    "text": "root(a::Oscar.Integer, n::Base.Int) -> Oscar.IntegerReturns the value r of largest absolute value such that r^n leq a. When a is a perfect n-th power, the return value will be an n-th root of a.When n is even, the non-negative root is always returned. An exception is raised if n leq 0 or if n is even and a  0.root(ZZ(16), 4)\nroot(ZZ(5), 2)\nroot(ZZ(-5), 3)\nroot(ZZ(0), 4)\nroot(ZZ(-5), 2)\nroot(ZZ(12), -2)"
 },
 
 {
@@ -181,7 +213,47 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Combinatorial functions",
     "category": "section",
-    "text": "Oscar.factorial(n::Base.Int) -> Oscar.IntegerReturns the factorial of n, i.e. n. An exception is raised if n  0. We define 0 = 1.note: Note\nThe function factorial is already defined in Julia, but returns a Julia Base.Int, which overflows when the result is too large. To disambiguate the Oscar version of the function it is accessed via Oscar.factorial.rising_factorial(x::Oscar.Integer, n::Base.Int) -> Oscar.IntegerReturns x(x + 1)(x + 2)ldots(x + n - 1). An exception is raised if n  0. We define rising_factorial(x, 0) to be 1.primorial(n::Base.Int) -> Oscar.IntegerReturns the n-th primorial number P(n), i.e. the product of all primes less than or equal to n. An exception is raised if n  0. We define P(0) = P(1) = 1.bell(n::Base.Int) -> Oscar.IntegerReturns the n-th Bell number B(n), i.e. the number of ways of partitioning a set of n elements. An exception is raised if n  0.Oscar.binomial(n::Base.Int, k::Base.Int) -> Oscar.IntegerReturns the binomial coefficient fracnk(n - k). If n k  0 or k  n we return zero.note: Note\nJulia already defines the binomial function,  which returns a Base.Int that may overflow when the result is too large. To disambiguate the Oscar version of the function it is accessed via Oscar.binomial.number_of_partitions(n::Oscar.Integer) -> Oscar.Integer\nnumber_of_partitions(n::Base.Integer) -> Oscar.IntegerReturns the number of integer partitions p(n) of n, i.e. the number of distinct ways to write n as a sum of positive integers. Note that p(0) = 1, as the empty sum is counted. For n  0 we return zero."
+    "text": ""
+},
+
+{
+    "location": "integer.html#Factorial-1",
+    "page": "Integers",
+    "title": "Factorial",
+    "category": "section",
+    "text": "Oscar.factorial(n::Base.Int) -> Oscar.IntegerReturns the factorial of n, i.e. n. An exception is raised if n  0. We define 0 = 1.note: Note\nThe function factorial is already defined in Julia, but returns a Julia Base.Int, which overflows when the result is too large. To disambiguate the Oscar version of the function it is accessed via Oscar.factorial.rising_factorial(x::Oscar.Integer, n::Base.Int) -> Oscar.IntegerReturns x(x + 1)(x + 2)ldots(x + n - 1). An exception is raised if n  0. We define rising_factorial(x, 0) to be 1."
+},
+
+{
+    "location": "integer.html#Primorial-1",
+    "page": "Integers",
+    "title": "Primorial",
+    "category": "section",
+    "text": "primorial(n::Base.Int) -> Oscar.IntegerReturns the promorial P(n), i.e. the product of all primes less than or equal to n. An exception is raised if n  0. We define P(0) = P(1) = 1."
+},
+
+{
+    "location": "integer.html#Bell-numbers-1",
+    "page": "Integers",
+    "title": "Bell numbers",
+    "category": "section",
+    "text": "bell(n::Base.Int) -> Oscar.IntegerReturns the n-th Bell number B(n), i.e. the number of ways of partitioning a set of n elements. An exception is raised if n  0."
+},
+
+{
+    "location": "integer.html#Binomial-coefficients-1",
+    "page": "Integers",
+    "title": "Binomial coefficients",
+    "category": "section",
+    "text": "Oscar.binomial(n::Base.Int, k::Base.Int) -> Oscar.IntegerReturns the binomial coefficient fracnk(n - k). If n k  0 or k  n we return zero.note: Note\nJulia already defines the binomial function,  which returns a Base.Int that may overflow when the result is too large. To disambiguate the Oscar version of the function it is accessed via Oscar.binomial."
+},
+
+{
+    "location": "integer.html#Integer-partitions-1",
+    "page": "Integers",
+    "title": "Integer partitions",
+    "category": "section",
+    "text": "number_of_partitions(n::Oscar.Integer) -> Oscar.Integer\nnumber_of_partitions(n::Base.Integer) -> Oscar.IntegerReturns the number of integer partitions p(n) of n, i.e. the number of distinct ways to write n as a sum of positive integers. Note that p(0) = 1, as the empty sum is counted. For n  0 we return zero."
 },
 
 {
@@ -189,7 +261,47 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Number theoretic functionality",
     "category": "section",
-    "text": "fibonacci(n::Base.Int) -> Oscar.IntegerReturns the n-th Fibonacci number F(n), defined by the recurrence relation F(1) = 1, F(2) = 1 and F(n) = F(n - 1) + F(n - 2) for n geq 3. For convenience we define F(0) = 0. An exception is raised if n  0.moebius_mu(n::Oscar.Integer) -> Base.Int\nmoebius_mu(n::Base.Integer) -> Base.Int Return the Moebius function mu(n), which is defined to be 0 if n is not squarefree and otherwise is defined to be +1 or -1 if n has an even or odd number of prime factors, respectively. Alternatively, mu(n) can be defined to be the sum of the primitive n-th roots of unity. An exception is raised if n  0.jacobi_symbol(m::Oscar.Integer, n::Oscar.Integer) -> Base.Int\njacobi_symbol(m::Base.Integer, n::Base.Integer) -> Base.IntReturn the Jacobi symbol left(fracmnright), which is defined for integers m and odd positive integers n. If the factorisation of n is n = p_1^i_1p_2^i_2ldots p_r^i_r then we defineleft(fracmnright) = left(fracmp_1right)^i_1left(fracmp_2right)^i_2ldots left(fracmp_rright)^i_rwhere left(fracmpright) on the right hand side is the Legendre symbol, which is defined for an odd prime number p to be 0 if p divides m and otherwise +1 or -1 depending on whether m is a square modulo p or not. An exception is raised if n is even or not positive.divisor_sigma(m::Oscar.Integer, n::Oscar.Integer) -> Oscar.Integer\ndivisor_sigma(m::Base.Integer, n::Base.Integer) -> Oscar.IntegerReturn the sum of the n-th powers of the divisors of msigma(m n) = sum_dm d^nWe define sigma(0 n) = 0 for all n. If n  0 we raise an exception.euler_phi(n::Oscar.Integer) -> Oscar.Integer\neuler_phi(n::Base.Integer) -> Oscar.IntegerReturn the Euler totient function varphi(n), i.e. the number of positive integers 1 leq x leq n which are coprime to n. Note that varphi(1) = 1 and varphi(0) = 0. We raise an exception if n  0."
+    "text": ""
+},
+
+{
+    "location": "integer.html#Fibonacci-sequence-1",
+    "page": "Integers",
+    "title": "Fibonacci sequence",
+    "category": "section",
+    "text": "fibonacci(n::Base.Int) -> Oscar.IntegerReturns the n-th Fibonacci number F(n), defined by the recurrence relation F(1) = 1, F(2) = 1 and F(n) = F(n - 1) + F(n - 2) for n geq 3. For convenience we define F(0) = 0. An exception is raised if n  0."
+},
+
+{
+    "location": "integer.html#Moebius-mu-function-1",
+    "page": "Integers",
+    "title": "Moebius mu function",
+    "category": "section",
+    "text": "moebius_mu(n::Oscar.Integer) -> Base.Int\nmoebius_mu(n::Base.Integer) -> Base.Int Return the Moebius function mu(n), which is defined to be 0 if n is not squarefree and otherwise is defined to be +1 or -1 if n has an even or odd number of prime factors, respectively. Alternatively, mu(n) can be defined to be the sum of the primitive n-th roots of unity. An exception is raised if n  0."
+},
+
+{
+    "location": "integer.html#Jacobi-symbols-1",
+    "page": "Integers",
+    "title": "Jacobi symbols",
+    "category": "section",
+    "text": "jacobi_symbol(m::Oscar.Integer, n::Oscar.Integer) -> Base.Int\njacobi_symbol(m::Base.Integer, n::Base.Integer) -> Base.IntReturn the Jacobi symbol left(fracmnright), which is defined for integers m and odd, positive integers n. If the factorisation of n is n = p_1^i_1p_2^i_2ldots p_r^i_r then we defineleft(fracmnright) = left(fracmp_1right)^i_1left(fracmp_2right)^i_2ldots left(fracmp_rright)^i_rwhere left(fracmpright) on the right hand side is the Legendre symbol, which is defined for an odd prime number p to be 0 if p divides m and otherwise +1 or -1 depending on whether m is a square modulo p or not. An exception is raised if n is even or not positive."
+},
+
+{
+    "location": "integer.html#Sigma-function-1",
+    "page": "Integers",
+    "title": "Sigma function",
+    "category": "section",
+    "text": "divisor_sigma(m::Oscar.Integer, n::Oscar.Integer) -> Oscar.Integer\ndivisor_sigma(m::Base.Integer, n::Base.Integer) -> Oscar.IntegerReturn the sum of the n-th powers of the divisors of msigma(m n) = sum_dm d^nWe define sigma(0 n) = 0 for all n. If n  0 we raise an exception."
+},
+
+{
+    "location": "integer.html#Euler-totient-function-1",
+    "page": "Integers",
+    "title": "Euler totient function",
+    "category": "section",
+    "text": "euler_phi(n::Oscar.Integer) -> Oscar.Integer\neuler_phi(n::Base.Integer) -> Oscar.IntegerReturn the Euler totient function varphi(n), i.e. the number of positive integers 1 leq x leq n which are coprime to n. Note that varphi(1) = 1 and varphi(0) = 0. We raise an exception if n  0."
 },
 
 ]}
