@@ -45,7 +45,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integer constructors",
     "category": "section",
-    "text": "Oscar integers are created using ZZ:ZZ(2)^100\nZZ(618970019642690137449562111)One can also construct the integer 0 with the empty constructor:ZZ()The following special constructors are also provided:zero(ZZ) : the integer 0\none(ZZ) : the integer 1Note that ZZ is not a Julia type, but the above methods of constructing Oscar integers are similar to the way that Julia integer types can be used to construct Julia integers.Int(123)\nBigInt(123456343567843598776327698374259876295438725)\nzero(BigInt)\none(Int)"
+    "text": "Oscar integers are created using ZZ:ZZ(2)^100\nZZ(618970019642690137449562111)One can also construct the integer 0 with the empty constructor:ZZ()The following special constructors are also provided:zero(ZZ)\none(ZZ)zero(ZZ)\none(ZZ)Note that ZZ is not a Julia type, but the above methods of constructing Oscar integers are similar to the way that Julia integer types can be used to construct Julia integers.Int(123)\nBigInt(123456343567843598776327698374259876295438725)\nzero(BigInt)\none(Int)"
 },
 
 {
@@ -129,11 +129,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "integer.html#Modular-arithmetic-1",
+    "page": "Integers",
+    "title": "Modular arithmetic",
+    "category": "section",
+    "text": ""
+},
+
+{
     "location": "integer.html#Modular-reduction-1",
     "page": "Integers",
     "title": "Modular reduction",
     "category": "section",
-    "text": "mod(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : remainder onlyOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.The mod function computes a remainder r such that when r neq 0 the sign of r is the same as the sign of b. Thus, if b  0 then mod(a, b) will be in the range 0 b). An exception is raised if the modulus b is zero.There is no function implemented to compute the corresponding quotient.remainder division sign rounding\nrem div/divrem same as dividend towards zero\nmod  same as divisor towards -inftymod(ZZ(4), ZZ(3))\n# mod(ZZ(2), ZZ(0)) "
+    "text": "mod(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : remainder onlyOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.The mod function computes a remainder r such that when r neq 0 the sign of r is the same as the sign of b. Thus, if b  0 then mod(a, b) will be in the range 0 b). An exception is raised if the modulus b is zero. This is summarised in the following table.remainder division sign rounding\nrem div/divrem same as dividend towards zero\nmod  same as divisor towards -inftyThere is no function implemented to compute the quotient corresponding to the remainder given by mod.mod(ZZ(4), ZZ(3))\n# mod(ZZ(2), ZZ(0)) "
 },
 
 {
@@ -269,7 +277,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integer partitions",
     "category": "section",
-    "text": "number_of_partitions(n::Oscar.Integer) -> Oscar.Integer\nnumber_of_partitions(n::Base.Integer) -> Oscar.IntegerReturns the number of integer partitions p(n) of n, i.e. the number of distinct ways to write n as a sum of positive integers. Note that p(0) = 1, as the empty sum is counted. For n  0 we return zero."
+    "text": "number_of_partitions(n::Oscar.Integer) -> Oscar.Integer\nnumber_of_partitions(n::Base.Integer) -> Oscar.IntegerReturns the number of integer partitions p(n) of n, i.e. the number of distinct ways to write n as a sum of positive integers. Note that p(0) = 1, as the empty sum is counted. For n  0 we return zero.primorial(100)\nOscar.binomial(72, 15)\nnumber_of_partitions(10^6)"
 },
 
 {
@@ -317,7 +325,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Euler totient function",
     "category": "section",
-    "text": "euler_phi(n::Oscar.Integer) -> Oscar.Integer\neuler_phi(n::Base.Integer) -> Oscar.IntegerReturn the Euler totient function varphi(n), i.e. the number of positive integers 1 leq x leq n which are coprime to n. Note that varphi(1) = 1 and varphi(0) = 0. We raise an exception if n  0."
+    "text": "euler_phi(n::Oscar.Integer) -> Oscar.Integer\neuler_phi(n::Base.Integer) -> Oscar.IntegerReturn the Euler totient function varphi(n), i.e. the number of positive integers 1 leq x leq n which are coprime to n. Note that varphi(1) = 1 and varphi(0) = 0. We raise an exception if n  0.fibonacci(100)\njacobi_symbol(3, 37)\ndivisor_sigma(60, 5)"
 },
 
 ]}
