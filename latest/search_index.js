@@ -69,7 +69,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Predicates and properties",
     "category": "section",
-    "text": "The following predicates are provided, which return true or false:iszero(n::Oscar.Integer) -> Bool : n = 0\nisone(n::Oscar.Integer) -> Bool : n = 1\nisunit(n::Oscar.Integer) -> Bool : n = pm 1\nissquare(n::Oscar.Integer) -> Bool\nisprime(n::Oscar.Integer) -> Bool\nisprobable_prime(n::Oscar.Integer) -> BoolThe isprime predicate will prove primality, whereas isprobable_prime may declare a composite number to be prime with very low probability.Negative numbers, 0 and 1 are not considered prime by these predicates.The following properties can also be computed:sign(n::Oscar.Integer) -> Base.Int returns the sign of n, i.e. nnif n neq 0 or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
+    "text": "The following predicates are provided, which return true or false:iszero(n::Oscar.Integer) -> Bool : n = 0\nisone(n::Oscar.Integer) -> Bool : n = 1\nisunit(n::Oscar.Integer) -> Bool : n = pm 1\nissquare(n::Oscar.Integer) -> Bool\nisprime(n::Oscar.Integer) -> Bool\nisprobable_prime(n::Oscar.Integer) -> BoolThe isprime predicate will prove primality, whereas isprobable_prime may declare a composite number to be prime with very low probability.Negative numbers, 0 and 1 are not considered prime by these predicates.The following properties can also be computed:sign(n::Oscar.Integer) -> Base.IntReturns the sign of n, i.e. nn if n neq 0 or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
 },
 
 {
@@ -149,7 +149,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Factorisation",
     "category": "section",
-    "text": "factor(nOscarInteger) - FacReturns a factorisation of the given integer. The return value is a special factorisation struct which can be manipulated using the functions below.factor(ZZ(-6000361807272228723606))\nfactor(ZZ(0))unit(F::Fac) -> Oscar.IntegerF = factor(ZZ(-12))\nunit(F)"
+    "text": "factor(n::Oscar.Integer) -> FacReturns a factorisation of the given integer. The return value is a special factorisation struct which can be manipulated using the functions below.factor(ZZ(-6000361807272228723606))\nfactor(ZZ(0))unit(F::Fac) -> Oscar.IntegerF = factor(ZZ(-12))\nunit(F)"
 },
 
 {
