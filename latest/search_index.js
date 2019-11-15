@@ -65,11 +65,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Predicates-and-properties-1",
+    "location": "integer.html#Predicates-1",
     "page": "Integers",
-    "title": "Predicates and properties",
+    "title": "Predicates",
     "category": "section",
-    "text": "The following predicates are provided, which return true or false:iszero(n::Oscar.Integer) -> Bool : n = 0\nisone(n::Oscar.Integer) -> Bool : n = 1\nisunit(n::Oscar.Integer) -> Bool : n = pm 1\nissquare(n::Oscar.Integer) -> Bool\nisprime(n::Oscar.Integer) -> Bool\nisprobable_prime(n::Oscar.Integer) -> BoolThe isprime predicate will prove primality, whereas isprobable_prime may declare a composite number to be prime with very low probability.Negative numbers, 0 and 1 are not considered prime by these predicates.The following properties can also be computed:sign(n::Oscar.Integer) -> Base.IntReturns the sign of n, i.e. nn if n neq 0 or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
+    "text": "iszero(n::Oscar.Integer) -> Bool\nisone(n::Oscar.Integer) -> Bool\nisunit(n::Oscar.Integer) -> Bool\nissquare(n::Oscar.Integer) -> Bool\nisprime(n::Oscar.Integer) -> Bool\nisprobable_prime(n::Oscar.Integer) -> BoolThe isprime predicate will prove primality, whereas isprobable_prime may declare a composite number to be prime with very low probability.Negative numbers, 0 and 1 are not considered prime by isprime and isprobable_prime.isone(ZZ(1))\nisunit(ZZ(-1))\nissquare(ZZ(16))\nisprobable_prime(ZZ(23))"
+},
+
+{
+    "location": "integer.html#Properties-1",
+    "page": "Integers",
+    "title": "Properties",
+    "category": "section",
+    "text": "sign(n::Oscar.Integer) -> Base.IntReturns the sign of n, i.e. nn if n neq 0, or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
 },
 
 {
@@ -121,11 +129,11 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Gcd-and-lcm-1",
+    "location": "integer.html#Greatest-common-divisor-1",
     "page": "Integers",
-    "title": "Gcd and lcm",
+    "title": "Greatest common divisor",
     "category": "section",
-    "text": "gcd(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer)One or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Returns the greatest common divisor of its inputs, which is by definition the largest integer dividing the two inputs, unless both inputs are zero in which case it returns zero. The result will always be non-negative and will only be zero if both inputs are zero.gcd(ZZ(34), ZZ(17))\ngcd(ZZ(3), ZZ(0))lcm(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer)One or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Returns the least positive multiple of its inputs, unless one or more of its inputs is zero, in which case it returns zero.lcm(ZZ(6), ZZ(21))\nlcm(ZZ(0), ZZ(0))note: Note\nThe identity gcd(m n)mathrmlcm(m n) = mn does not hold for the definition that Oscar uses, unless both m and n are the same sign or one of them is zero."
+    "text": "gcd(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.IntegerOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Returns the greatest common divisor of its inputs, which is by definition the largest integer dividing the two inputs, unless both inputs are zero in which case it returns zero. The result will always be non-negative and will only be zero if both inputs are zero.gcd(ZZ(34), ZZ(17))\ngcd(ZZ(3), ZZ(0))lcm(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.IntegerOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Returns the least common multiple of a and b. This is the least positive multiple of a and b, unless a = 0 or b = 0 which case we define the least common multiple to be zero.lcm(ZZ(6), ZZ(21))\nlcm(ZZ(0), ZZ(0))note: Note\nThe identity gcd(m n)mathrmlcm(m n) = mn does not hold for the definition that Oscar uses, unless both m and n are the same sign or one of them is zero."
 },
 
 {
