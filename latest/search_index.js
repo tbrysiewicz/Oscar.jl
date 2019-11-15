@@ -29,7 +29,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integers",
     "category": "section",
-    "text": "An important design decision in Oscar.jl is to use Julia as the user language by default. This means that integers typed at the REPL are Julia integers. However, for performance reasons, Oscar has its own integer format.Julia has a number of different integer types, but the two that are most relevant here are Base.Int and Base.BigInt. All the Julia integer types belong to Base.Integer.The Base.Int type is for machine integers which are signed, twos-complement integers of either 32 or 64 bits depending on the machine architecture.The Base.BigInt type is backed by GMP multiprecision integers.Oscar currently only has one integer type, Oscar.fmpz which for performance reasons scales internally from machine integers to GMP multiprecision integers. The Oscar integer type belongs to Oscar.Integer.This situation is illustrated in the following diagram.(Image: alt text)In the documentation below, we always use Base.Integer for a Julia integer and Oscar.Integer for an Oscar integer. Some functions accept only machine integers for certain arguments; in such cases, we refer to Base.Int."
+    "text": "An important design decision in Oscar.jl is to use Julia as the user language by default. This means that integers typed at the REPL are Julia integers. However, for performance reasons, Oscar has its own integer format.Julia has a number of different integer types, but the two that are most relevant here are Base.Int and Base.BigInt. All the Julia integer types belong to Base.Integer.The Base.Int type is for machine integers which are highly efficient, but can only represent integers up to a certain hardware defined size before wrapping around.The Base.BigInt type is backed by GMP multiprecision integers and can represent integers whose size is usually only limited by available memory.Oscar currently only has one integer type, Oscar.fmpz which for performance reasons scales internally from machine integers to GMP multiprecision integers. The Oscar integer type belongs to Oscar.Integer.This situation is illustrated in the following diagram.(Image: alt text)In the documentation below, we always use Base.Integer for a Julia integer and Oscar.Integer for an Oscar integer. Some functions accept only machine integers for certain arguments; in such cases, we refer to Base.Int.Some functions can accept an Oscar integer or a Julia integer, which we denote by the Julia union Union{Oscar.Integer, Base.Integer}."
 },
 
 {
@@ -37,7 +37,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "The ring of integers",
     "category": "section",
-    "text": "Every object in Oscar representing a mathematical element has a parent. This is an object encoding information about where that element belongs.The parent of an Oscar integer is the ring of integers ZZ.ZZ\nR = parent(ZZ(2))\nR == ZZ"
+    "text": "Every object in Oscar representing a mathematical element has a parent. This is an object encoding information about where that element belongs.The parent of an Oscar integer is the ring of integers ZZ.ZZ"
 },
 
 {
@@ -45,7 +45,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integer constructors",
     "category": "section",
-    "text": "Oscar integers are created using ZZ:ZZ(2)^100\nZZ(618970019642690137449562111)One can also construct the integer 0 with the empty constructor:ZZ()The following special constructors are also provided:zero(ZZ) : the integer 0\none(ZZ) : the integer 1"
+    "text": "Oscar integers are created using ZZ:ZZ(2)^100\nZZ(618970019642690137449562111)One can also construct the integer 0 with the empty constructor:ZZ()The following special constructors are also provided:zero(ZZ) : the integer 0\none(ZZ) : the integer 1Note that ZZ is not a Julia type, but the above methods of constructing Oscar integers are similar to the way that Julia integer types can be used to construct Julia integers.Int(123)\nBigInt(123456343567843598776327698374259876295438725)\nzero(BigInt)\none(Int)"
 },
 
 {
