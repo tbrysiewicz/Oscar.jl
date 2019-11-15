@@ -117,7 +117,23 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Euclidean division",
     "category": "section",
-    "text": "The ring of integers is a Euclidean domain and Oscar provides Euclidean division through the functions divrem, div and rem.Integer Euclidean division of a by b computes a quotient and remainder such thata = qb + rwith r  b.divrem(a::Oscar.Integer, b::Oscar.Integer) -> (Oscar.Integer, Oscar.Integer) : division with remainder\ndiv(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : quotient only\nrem(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : remainder onlyOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Both rem and divrem compute the remainder r such that when r neq 0 the sign of r is the same as the sign of a.mod(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : remainder onlyOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.The mod function computes a remainder r such that when r neq 0 the sign of r is the same as the sign of b. Thus, if b  0 then mod(a, b) will be in the range 0 b). There is no function implemented to compute the corresponding quotient.remainder division sign rounding\nrem div/divrem same as dividend towards zero\nmod  same as divisor towards -inftyq, r = divrem(ZZ(5), ZZ(3))\nq = div(ZZ(7), ZZ(2))\nr = mod(ZZ(4), ZZ(3))All three functions raise an exception if the modulus b is zero.note: Note\nThe rem function does not provide a minimal set of representatives, e.g. rem(-2, 3) = -2 but rem(1, 3) = 1."
+    "text": "The ring of integers is a Euclidean domain and Oscar provides Euclidean division through the functions divrem, div and rem.Integer Euclidean division of a by b computes a quotient and remainder such thata = qb + rwith r  b."
+},
+
+{
+    "location": "integer.html#Division-with-remainder-1",
+    "page": "Integers",
+    "title": "Division with remainder",
+    "category": "section",
+    "text": "divrem(a::Oscar.Integer, b::Oscar.Integer) -> (Oscar.Integer, Oscar.Integer) : division with remainder\ndiv(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : quotient only\nrem(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : remainder onlyOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Both rem and divrem compute the remainder r such that when r neq 0 the sign of r is the same as the sign of a.All three functions raise an exception if the modulus b is zero.divrem(ZZ(5), ZZ(3))\ndiv(ZZ(7), ZZ(2))\nrem(ZZ(4), ZZ(3))\n# div(ZZ(2), ZZ(0))note: Note\nThe rem function does not provide a minimal set of representatives, e.g. rem(-2, 3) = -2 but rem(1, 3) = 1."
+},
+
+{
+    "location": "integer.html#Modular-reduction-1",
+    "page": "Integers",
+    "title": "Modular reduction",
+    "category": "section",
+    "text": "mod(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : remainder onlyOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.The mod function computes a remainder r such that when r neq 0 the sign of r is the same as the sign of b. Thus, if b  0 then mod(a, b) will be in the range 0 b). An exception is raised if the modulus b is zero.There is no function implemented to compute the corresponding quotient.remainder division sign rounding\nrem div/divrem same as dividend towards zero\nmod  same as divisor towards -inftymod(ZZ(4), ZZ(3))\n# mod(ZZ(2), ZZ(0)) "
 },
 
 {
