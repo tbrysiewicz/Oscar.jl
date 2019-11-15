@@ -29,7 +29,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integers",
     "category": "section",
-    "text": "An important design decision in Oscar.jl is to use Julia as the user language by default. This means that integers typed at the REPL are Julia integers. However, for performance reasons, Oscar has its own integer format.In the following, unless stated otherwise, when we refer to integers we mean Oscar integers; when we refer to an Int we mean the Julia Int."
+    "text": "An important design decision in Oscar.jl is to use Julia as the user language by default. This means that integers typed at the REPL are Julia integers. However, for performance reasons, Oscar has its own integer format.Julia has a number of different integer types, but the two that are most relevant here are Base.Int and Base.BigInt. All the Julia integer types belong to Base.Integer.The Base.Int type is for machine integers which are signed, twos-complement integers of either 32 or 64 bits depending on the machine architecture.The Base.BigInt type is backed by GMP multiprecision integers.Oscar currently only has one integer type, Oscar.fmpz which for performance reasons scales internally from machine integers to GMP multiprecision integers. The Oscar integer type belongs to Oscar.Integer.This situation is illustrated in the following diagram.(Image: alt text)In the documentation below, we always use Base.Integer for a Julia integer and Oscar.Integer for an Oscar integer. Some functions accept only machine integers for certain arguments; in such cases, we refer to Base.Int."
 },
 
 {
