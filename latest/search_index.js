@@ -237,7 +237,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Combinatorial functions",
     "category": "section",
-    "text": ""
+    "text": "note: Note\nThe functions in this section that take Base.Int arguments will return a Base.Int, which may overflow. Use the Oscar.Integer versions if this is not the desired behaviour."
 },
 
 {
@@ -245,7 +245,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Factorial",
     "category": "section",
-    "text": "Oscar.factorial(n::Base.Int) -> Oscar.IntegerReturns the factorial of n, i.e. n. An exception is raised if n  0. We define 0 = 1.note: Note\nThe function factorial is already defined in Julia, but returns a Julia Base.Int, which overflows when the result is too large. To disambiguate the Oscar version of the function it is accessed via Oscar.factorial.rising_factorial(x::Oscar.Integer, n::Base.Int) -> Oscar.IntegerReturns x(x + 1)(x + 2)ldots(x + n - 1). An exception is raised if n  0. We define rising_factorial(x, 0) to be 1.Oscar.factorial(30)"
+    "text": "factorial(n::Oscar.Integer) -> Oscar.IntegerReturns the factorial of n, i.e. n. An exception is raised if n  0. We define 0 = 1.note: Note\nThe function factorial is already defined in Julia for Base.Int.rising_factorial(x::Base.Int, n::Base.Int) -> Base.Int\nrising_factorial(x::Oscar.Integer, n::Base.Int) -> Oscar.Integer\nrising_factorial(x::Oscar.Integer, n::Oscar.Integer) -> Oscar.IntegerReturns x(x + 1)(x + 2)ldots(x + n - 1). An exception is raised if n  0. We define rising_factorial(x, 0) to be 1.factorial(ZZ(30))\nrising_factorial(ZZ(-30), 3)"
 },
 
 {
@@ -253,7 +253,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Primorial",
     "category": "section",
-    "text": "primorial(n::Base.Int) -> Oscar.IntegerReturns the promorial P(n), i.e. the product of all primes less than or equal to n. An exception is raised if n  0. We define P(0) = P(1) = 1.primorial(100)"
+    "text": "primorial(n::Base.Int) -> Base.Int\nprimorial(n::Oscar.Integer) -> Oscar.IntegerReturns the promorial P(n), i.e. the product of all primes less than or equal to n. An exception is raised if n  0. We define P(0) = P(1) = 1.primorial(ZZ(100))"
 },
 
 {
@@ -261,7 +261,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Bell numbers",
     "category": "section",
-    "text": "bell(n::Base.Int) -> Oscar.IntegerReturns the n-th Bell number B(n), i.e. the number of ways of partitioning a set of n elements. An exception is raised if n  0.bell(20)"
+    "text": "bell(n::Base.Int) -> Base.Int\nbell(n::Oscar.Integer) -> Oscar.IntegerReturns the n-th Bell number B(n), i.e. the number of ways of partitioning a set of n elements. An exception is raised if n  0.bell(ZZ(20))"
 },
 
 {
@@ -269,7 +269,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Binomial coefficients",
     "category": "section",
-    "text": "Oscar.binomial(n::Base.Int, k::Base.Int) -> Oscar.IntegerReturns the binomial coefficient fracnk(n - k). If n k  0 or k  n we return zero.note: Note\nJulia already defines the binomial function,  which returns a Base.Int that may overflow when the result is too large. To disambiguate the Oscar version of the function it is accessed via Oscar.binomial.Oscar.binomial(72, 15)"
+    "text": "binomial(n::Oscar.Integer, k::Oscar.Integer) -> Oscar.IntegerReturns the binomial coefficient fracnk(n - k). If n k  0 or k  n we return zero.note: Note\nJulia already defines the binomial function for Base.Int.binomial(ZZ(72), ZZ(15))"
 },
 
 {
@@ -277,7 +277,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Integer partitions",
     "category": "section",
-    "text": "number_of_partitions(n::Oscar.Integer) -> Oscar.Integer\nnumber_of_partitions(n::Base.Integer) -> Oscar.IntegerReturns the number of integer partitions p(n) of n, i.e. the number of distinct ways to write n as a sum of positive integers. Note that p(0) = 1, as the empty sum is counted. For n  0 we return zero.number_of_partitions(10^6)"
+    "text": "number_of_partitions(n::Base.Int) -> Base.Int\nnumber_of_partitions(n::Oscar.Integer) -> Oscar.IntegerReturns the number of integer partitions p(n) of n, i.e. the number of distinct ways to write n as a sum of positive integers. Note that p(0) = 1, as the empty sum is counted. For n  0 we return zero.number_of_partitions(ZZ(10^6))"
 },
 
 {
@@ -285,7 +285,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Number theoretic functionality",
     "category": "section",
-    "text": ""
+    "text": "!!! note                                                                                     The functions in this section that take Base.Int arguments will return                 a Base.Int, which may overflow. Use the Oscar.Integer versions if this               is not the desired behaviour."
 },
 
 {
@@ -293,7 +293,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Fibonacci sequence",
     "category": "section",
-    "text": "fibonacci(n::Base.Int) -> Oscar.IntegerReturns the n-th Fibonacci number F(n), defined by the recurrence relation F(1) = 1, F(2) = 1 and F(n) = F(n - 1) + F(n - 2) for n geq 3. For convenience we define F(0) = 0. An exception is raised if n  0.fibonacci(100)"
+    "text": "fibonacci(n::Base.Int) -> Base.Int\nfibonacci(n::Oscar.Integer) -> Oscar.IntegerReturns the n-th Fibonacci number F(n), defined by the recurrence relation F(1) = 1, F(2) = 1 and F(n) = F(n - 1) + F(n - 2) for n geq 3. For convenience we define F(0) = 0. An exception is raised if n  0.fibonacci(ZZ(100))"
 },
 
 {
@@ -301,7 +301,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Moebius mu function",
     "category": "section",
-    "text": "moebius_mu(n::Oscar.Integer) -> Base.Int\nmoebius_mu(n::Base.Integer) -> Base.Int Return the Moebius function mu(n), which is defined to be 0 if n is not squarefree and otherwise is defined to be +1 or -1 if n has an even or odd number of prime factors, respectively. Alternatively, mu(n) can be defined to be the sum of the primitive n-th roots of unity. An exception is raised if n  0.moebius_mu(30)"
+    "text": "moebius_mu(n::Base.Int) -> Base.Int\nmoebius_mu(n::Oscar.Integer) -> Base.Int Return the Moebius function mu(n), which is defined to be 0 if n is not squarefree and otherwise is defined to be +1 or -1 if n has an even or odd number of prime factors, respectively. Alternatively, mu(n) can be defined to be the sum of the primitive n-th roots of unity. An exception is raised if n  0.moebius_mu(30)"
 },
 
 {
@@ -309,7 +309,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Jacobi symbols",
     "category": "section",
-    "text": "jacobi_symbol(m::Oscar.Integer, n::Oscar.Integer) -> Base.Int\njacobi_symbol(m::Base.Integer, n::Base.Integer) -> Base.IntReturn the Jacobi symbol left(fracmnright), which is defined for integers m and odd, positive integers n. If the factorisation of n is n = p_1^i_1p_2^i_2ldots p_r^i_r then we defineleft(fracmnright) = left(fracmp_1right)^i_1left(fracmp_2right)^i_2ldots left(fracmp_rright)^i_rwhere left(fracmpright) on the right hand side is the Legendre symbol, which is defined for an odd prime number p to be 0 if p divides m and otherwise +1 or -1 depending on whether m is a square modulo p or not. An exception is raised if n is even or not positive.jacobi_symbol(3, 37)"
+    "text": "jacobi_symbol(m::Base.Int, n::Base.Int) -> Base.Int\njacobi_symbol(m::Oscar.Integer, n::Oscar.Integer) -> Base.IntReturn the Jacobi symbol left(fracmnright), which is defined for integers m and odd, positive integers n. If the factorisation of n is n = p_1^i_1p_2^i_2ldots p_r^i_r then we defineleft(fracmnright) = left(fracmp_1right)^i_1left(fracmp_2right)^i_2ldots left(fracmp_rright)^i_rwhere left(fracmpright) on the right hand side is the Legendre symbol, which is defined for an odd prime number p to be 0 if p divides m and otherwise +1 or -1 depending on whether m is a square modulo p or not. An exception is raised if n is even or not positive.jacobi_symbol(3, 37)"
 },
 
 {
@@ -317,7 +317,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Sigma function",
     "category": "section",
-    "text": "divisor_sigma(m::Oscar.Integer, n::Oscar.Integer) -> Oscar.Integer\ndivisor_sigma(m::Base.Integer, n::Base.Integer) -> Oscar.IntegerReturn the sum of the n-th powers of the divisors of msigma(m n) = sum_dm d^nWe define sigma(0 n) = 0 for all n. If n  0 we raise an exception.divisor_sigma(60, 5)"
+    "text": "divisor_sigma(m::Base.Int, n::Base.Int) -> Base.Int\ndivisor_sigma(m::Oscar.Integer, n::Base.Int) -> Oscar.Integer\ndivisor_sigma(m::Oscar.Integer, n::Oscar.Integer) -> Oscar.IntegerReturn the sum of the n-th powers of the divisors of msigma(m n) = sum_dm d^nWe define sigma(0 n) = 0 for all n. If n  0 we raise an exception.divisor_sigma(60, 5)"
 },
 
 {
@@ -325,7 +325,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Euler totient function",
     "category": "section",
-    "text": "euler_phi(n::Oscar.Integer) -> Oscar.Integer\neuler_phi(n::Base.Integer) -> Oscar.IntegerReturn the Euler totient function varphi(n), i.e. the number of positive integers 1 leq x leq n which are coprime to n. Note that varphi(1) = 1 and varphi(0) = 0. We raise an exception if n  0.euler_phi(200)"
+    "text": "euler_phi(n::Base.Int) -> Base.Int\neuler_phi(n::Oscar.Integer) -> Oscar.IntegerReturn the Euler totient function varphi(n), i.e. the number of positive integers 1 leq x leq n which are coprime to n. Note that varphi(1) = 1 and varphi(0) = 0. We raise an exception if n  0.euler_phi(200)"
 },
 
 ]}
