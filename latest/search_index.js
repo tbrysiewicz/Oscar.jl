@@ -285,7 +285,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Number theoretic functionality",
     "category": "section",
-    "text": "!!! note                                                                                     The functions in this section that take Base.Int arguments will return                 a Base.Int, which may overflow. Use the Oscar.Integer versions if this               is not the desired behaviour."
+    "text": "note: Note\nThe functions in this section that take Base.Int arguments will return a Base.Int, which may overflow. Use the Oscar.Integer versions if this is not the desired behaviour."
 },
 
 {
@@ -301,7 +301,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Moebius mu function",
     "category": "section",
-    "text": "moebius_mu(n::Base.Int) -> Base.Int\nmoebius_mu(n::Oscar.Integer) -> Base.Int Return the Moebius function mu(n), which is defined to be 0 if n is not squarefree and otherwise is defined to be +1 or -1 if n has an even or odd number of prime factors, respectively. Alternatively, mu(n) can be defined to be the sum of the primitive n-th roots of unity. An exception is raised if n  0.moebius_mu(30)"
+    "text": "moebius_mu(n::Base.Int) -> Base.Int\nmoebius_mu(n::Oscar.Integer) -> Base.Int Return the Moebius function mu(n), which is defined to be 0 if n is not squarefree and otherwise is defined to be +1 or -1 if n has an even or odd number of prime factors, respectively. Alternatively, mu(n) can be defined to be the sum of the primitive n-th roots of unity. An exception is raised if n leq 0.moebius_mu(30)"
 },
 
 {
@@ -317,7 +317,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Sigma function",
     "category": "section",
-    "text": "divisor_sigma(m::Base.Int, n::Base.Int) -> Base.Int\ndivisor_sigma(m::Oscar.Integer, n::Base.Int) -> Oscar.Integer\ndivisor_sigma(m::Oscar.Integer, n::Oscar.Integer) -> Oscar.IntegerReturn the sum of the n-th powers of the divisors of msigma(m n) = sum_dm d^nWe define sigma(0 n) = 0 for all n. If n  0 we raise an exception.divisor_sigma(60, 5)"
+    "text": "divisor_sigma(m::Base.Int, n::Base.Int) -> Base.Int\ndivisor_sigma(m::Oscar.Integer, n::Base.Int) -> Oscar.Integer\ndivisor_sigma(m::Oscar.Integer, n::Oscar.Integer) -> Oscar.IntegerReturn the sum of the n-th powers of the divisors of msigma(m n) = sum_dm d^nIf n leq 0 or m leq 0 we raise an exception.divisor_sigma(60, 5)"
 },
 
 {
@@ -325,7 +325,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Euler totient function",
     "category": "section",
-    "text": "euler_phi(n::Base.Int) -> Base.Int\neuler_phi(n::Oscar.Integer) -> Oscar.IntegerReturn the Euler totient function varphi(n), i.e. the number of positive integers 1 leq x leq n which are coprime to n. Note that varphi(1) = 1 and varphi(0) = 0. We raise an exception if n  0.euler_phi(200)"
+    "text": "euler_phi(n::Base.Int) -> Base.Int\neuler_phi(n::Oscar.Integer) -> Oscar.IntegerReturn the Euler totient function varphi(n), i.e. the number of positive integers 1 leq x leq n which are coprime to n. Note that varphi(1) = 1. We raise an exception if n leq 0.euler_phi(200)"
 },
 
 ]}
