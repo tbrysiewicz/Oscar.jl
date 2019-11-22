@@ -101,7 +101,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Exact Division",
     "category": "section",
-    "text": "divexact(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.IntegerOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.The result of the exact division of two integers will always be another integer. Exact division raises an exception if the division is not exact, or if division by zero is attempted.divexact(ZZ(6), ZZ(3))\ndivexact(ZZ(6), ZZ(0))\ndivexact(ZZ(6), ZZ(5))"
+    "text": "divexact(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.IntegerOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Returns the quotient of a by b. The result of the exact division of two integers will always be another integer. Exact division raises an exception if the division is not exact, or if division by zero is attempted.divexact(ZZ(6), ZZ(3))\ndivexact(ZZ(6), ZZ(0))\ndivexact(ZZ(6), ZZ(5))\ndivexact(ZZ(6), 2)"
 },
 
 {
@@ -293,7 +293,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Fibonacci sequence",
     "category": "section",
-    "text": "fibonacci(n::Base.Int) -> Base.Int\nfibonacci(n::Oscar.Integer) -> Oscar.IntegerReturns the n-th Fibonacci number F(n), defined by the recurrence relation F(1) = 1, F(2) = 1 and F(n) = F(n - 1) + F(n - 2) for n geq 3. For convenience we define F(0) = 0. An exception is raised if n  0.fibonacci(ZZ(100))"
+    "text": "fibonacci(n::Base.Int) -> Base.Int\nfibonacci(n::Oscar.Integer) -> Oscar.IntegerReturns the n-th Fibonacci number F(n), defined by the recurrence relation F(1) = 1, F(2) = 1 and F(n) = F(n - 1) + F(n - 2) for n geq 3. An exception is raised if n leq 0.fibonacci(ZZ(100))"
 },
 
 {
@@ -309,7 +309,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Jacobi symbols",
     "category": "section",
-    "text": "jacobi_symbol(m::Base.Int, n::Base.Int) -> Base.Int\njacobi_symbol(m::Oscar.Integer, n::Oscar.Integer) -> Base.IntReturn the Jacobi symbol left(fracmnright), which is defined for integers m and odd, positive integers n. If the factorisation of n is n = p_1^i_1p_2^i_2ldots p_r^i_r then we defineleft(fracmnright) = left(fracmp_1right)^i_1left(fracmp_2right)^i_2ldots left(fracmp_rright)^i_rwhere left(fracmpright) on the right hand side is the Legendre symbol, which is defined for an odd prime number p to be 0 if p divides m and otherwise +1 or -1 depending on whether m is a square modulo p or not. An exception is raised if n is even or not positive.jacobi_symbol(3, 37)"
+    "text": "jacobi_symbol(m::Base.Int, n::Base.Int) -> Base.Int\njacobi_symbol(m::Oscar.Integer, n::Oscar.Integer) -> Base.IntReturn the Jacobi symbol left(fracmnright), which is defined for integers m and odd, positive integers n. If the factorisation of n is n = p_1^i_1p_2^i_2ldots p_r^i_r then we defineleft(fracmnright) = left(fracmp_1right)^i_1left(fracmp_2right)^i_2ldots left(fracmp_rright)^i_rwhere left(fracmpright) on the right hand side is the Legendre symbol, which is defined for an odd prime number p to be 0 if p divides m and otherwise +1 or -1 depending on whether m is a square modulo p or not. An exception is raised if n is even or if n leq 0.jacobi_symbol(3, 37)"
 },
 
 {
@@ -317,7 +317,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Sigma function",
     "category": "section",
-    "text": "divisor_sigma(m::Base.Int, n::Base.Int) -> Base.Int\ndivisor_sigma(m::Oscar.Integer, n::Base.Int) -> Oscar.Integer\ndivisor_sigma(m::Oscar.Integer, n::Oscar.Integer) -> Oscar.IntegerReturn the sum of the n-th powers of the divisors of msigma(m n) = sum_dm d^nIf n leq 0 or m leq 0 we raise an exception.divisor_sigma(60, 5)"
+    "text": "divisor_sigma(m::Base.Int, n::Base.Int) -> Base.Int\ndivisor_sigma(m::Oscar.Integer, n::Base.Int) -> Oscar.Integer\ndivisor_sigma(m::Oscar.Integer, n::Oscar.Integer) -> Oscar.IntegerReturn the sum of the n-th powers of the divisors of msigma(m n) = sum_dm d^nIf m leq 0 or n  0 we raise an exception.divisor_sigma(60, 5)"
 },
 
 {
