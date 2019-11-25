@@ -169,6 +169,14 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "integer.html#Extended-GCD-1",
+    "page": "Integers",
+    "title": "Extended GCD",
+    "category": "section",
+    "text": "gcdx(a::Oscar.Integer, b::Oscar.Integer) -> (Oscar.Integer, Oscar.Integer, Oscar.Integer)One or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Returns a tuple (g s t) such that g is the greatest common divisor of a and b and g = as + bt. Normally s and t are chosen so that s  b(2g) and t  a(2g), where this uniquely defines s and t. But the following cases are handled specially: i) if a = b then t = bb, ii) if b = 0 or b = 2g then s = aa, iii) if a = 0 or a = 2g then t = bb."
+},
+
+{
     "location": "integer.html#Least-common-multiple-1",
     "page": "Integers",
     "title": "Least common multiple",
