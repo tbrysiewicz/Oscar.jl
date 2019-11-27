@@ -289,19 +289,19 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
+    "location": "integer.html#Fibonacci-sequence-1",
+    "page": "Integers",
+    "title": "Fibonacci sequence",
+    "category": "section",
+    "text": "fibonacci(n::Base.Int) -> Base.Int\nfibonacci(n::Oscar.Integer) -> Oscar.IntegerReturns the n-th Fibonacci number F(n), defined by the recurrence relation F(1) = 1, F(2) = 1 and F(n) = F(n - 1) + F(n - 2) for n geq 3. We define F(0) = 0 and for n  0 we have F(-n) = (-1)^n+1F(n).fibonacci(ZZ(100))\nfibonacci(-2)"
+},
+
+{
     "location": "integer.html#Number-theoretic-functionality-1",
     "page": "Integers",
     "title": "Number theoretic functionality",
     "category": "section",
     "text": "note: Note\nThe functions in this section that take Base.Int arguments will return a Base.Int, which may overflow. Use the Oscar.Integer versions if this is not the desired behaviour."
-},
-
-{
-    "location": "integer.html#Fibonacci-sequence-1",
-    "page": "Integers",
-    "title": "Fibonacci sequence",
-    "category": "section",
-    "text": "fibonacci(n::Base.Int) -> Base.Int\nfibonacci(n::Oscar.Integer) -> Oscar.IntegerReturns the n-th Fibonacci number F(n), defined by the recurrence relation F(1) = 1, F(2) = 1 and F(n) = F(n - 1) + F(n - 2) for n geq 3. An exception is raised if n leq 0.fibonacci(ZZ(100))"
 },
 
 {
