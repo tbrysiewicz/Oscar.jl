@@ -69,7 +69,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Predicates",
     "category": "section",
-    "text": "iszero(n::Oscar.Integer) -> Bool\nisone(n::Oscar.Integer) -> Bool\nisunit(n::Oscar.Integer) -> Bool\nissquare(n::Oscar.Integer) -> Bool\nisprime(n::Oscar.Integer) -> Bool\nisprobable_prime(n::Oscar.Integer) -> BoolThe isprime predicate will prove primality, whereas isprobable_prime may declare a composite number to be prime with very low probability.Negative numbers, 0 and 1 are not considered prime by isprime and isprobable_prime.isone(ZZ(1))\nisunit(ZZ(-1))\nissquare(ZZ(16))\nisprobable_prime(ZZ(23))"
+    "text": "iszero(n::Oscar.Integer) -> Bool\nisone(n::Oscar.Integer) -> Bool\nisunit(n::Oscar.Integer) -> Bool\nisodd(n::Oscar.Integer) -> Bool\niseven(n::Oscar.Integer) -> Bool\nissquare(n::Oscar.Integer) -> Bool\nisprime(n::Oscar.Integer) -> Bool\nisprobable_prime(n::Oscar.Integer) -> BoolThe isprime predicate will prove primality, whereas isprobable_prime may declare a composite number to be prime with very low probability.Negative numbers, 0 and 1 are not considered prime by isprime and isprobable_prime.isone(ZZ(1))\nisunit(ZZ(-1))\nissquare(ZZ(16))\nisprobable_prime(ZZ(23))"
 },
 
 {
@@ -77,7 +77,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Properties",
     "category": "section",
-    "text": "sign(n::Oscar.Integer) -> Base.IntReturns the sign of n, i.e. nn if n neq 0, or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))"
+    "text": "sign(n::Oscar.Integer) -> Base.IntReturns the sign of n, i.e. nn if n neq 0, or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))abs(n::Oscar.Integer) -> Oscar.IntegerReturn the absolute value of n, i.e. n if n geq 0 and -n otherwiseabs(ZZ(-3))"
 },
 
 {
@@ -125,7 +125,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Division with remainder",
     "category": "section",
-    "text": "divrem(a::Oscar.Integer, b::Oscar.Integer) -> (Oscar.Integer, Oscar.Integer) : division with remainder\ndiv(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : quotient only\nrem(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : remainder onlyOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Both rem and divrem compute the remainder r such that when r neq 0 the sign of r is the same as the sign of a.All three functions raise an exception if the modulus b is zero.divrem(ZZ(5), ZZ(3))\ndiv(ZZ(7), ZZ(2))\nrem(ZZ(4), ZZ(3))\n# div(ZZ(2), ZZ(0))note: Note\nThe rem function does not provide a minimal set of representatives, e.g. rem(-2, 3) = -2 but rem(1, 3) = 1."
+    "text": "divrem(a::Oscar.Integer, b::Oscar.Integer) -> (Oscar.Integer, Oscar.Integer) : division with remainder\ndiv(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : quotient only\nrem(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : remainder onlyOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.Both rem and divrem compute the remainder r such that when r neq 0 the sign of r is the same as the sign of a.All three functions raise an exception if the modulus b is zero.divrem(ZZ(5), ZZ(3))\ndiv(ZZ(7), ZZ(2))\nrem(ZZ(4), ZZ(3))\ndiv(ZZ(2), ZZ(0))note: Note\nThe rem function does not provide a minimal set of representatives, e.g. rem(-2, 3) = -2 but rem(1, 3) = 1."
 },
 
 {
@@ -141,7 +141,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Modular reduction",
     "category": "section",
-    "text": "mod(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : remainder onlyOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.The mod function computes a remainder r such that when r neq 0 the sign of r is the same as the sign of b. Thus, if b  0 then mod(a, b) will be in the range 0 b). An exception is raised if the modulus b is zero. This is summarised in the following table.remainder division sign rounding\nrem div/divrem same as dividend towards zero\nmod  same as divisor towards -inftyThere is no function implemented to compute the quotient corresponding to the remainder given by mod.mod(ZZ(4), ZZ(3))\n# mod(ZZ(2), ZZ(0)) "
+    "text": "mod(a::Oscar.Integer, b::Oscar.Integer) -> Oscar.Integer : remainder onlyOne or both arguments may be Julia integers, however if they both are, the result will be a Julia integer not an Oscar integer.The mod function computes a remainder r such that when r neq 0 the sign of r is the same as the sign of b. Thus, if b  0 then mod(a, b) will be in the range 0 b). An exception is raised if the modulus b is zero. This is summarised in the following table.remainder division sign rounding\nrem div/divrem same as dividend towards zero\nmod  same as divisor towards -inftyThere is no function implemented to compute the quotient corresponding to the remainder given by mod.mod(ZZ(4), ZZ(3))\nmod(ZZ(2), ZZ(0)) "
 },
 
 {
