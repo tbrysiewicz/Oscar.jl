@@ -365,7 +365,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Rationals",
     "title": "Integer constructors",
     "category": "section",
-    "text": "Oscar rationals can be created using QQ. Two arguments can be passed to specify numerator and denominator. If a single argument is passed, the denominator is set to 1.For convenience, QQ also accepts Julia integers, but will always construct an Oscar rational.Naturally, Julia\'s double slash operator can also be used to construct fractions. However, unlike QQ, the double slash operator only constructs an Oscar rational if either the numerator or denominator is an Oscar integer.An exception is raised if a fraction is constructed with denominator zero.QQ(1, 2)\nQQ(5)\nZZ(3)//5\n1//ZZ(7)One can also construct the rational number 0 with the empty constructor:QQ()The following special constructors are also provided:zero(QQ)\none(QQ)zero(QQ)\none(QQ)"
+    "text": "Oscar rationals can be created using QQ. Two arguments can be passed to specify numerator and denominator. If a single argument is passed, the denominator is set to 1.For convenience, QQ also accepts Julia integers and rationals, but will always construct an Oscar rational.Naturally, Julia\'s double slash operator can also be used to construct fractions. However, unlike QQ, the double slash operator only constructs an Oscar rational if either the numerator or denominator is an Oscar integer.An exception is raised if a fraction is constructed with denominator zero.QQ(1, 2)\nQQ(5)\nZZ(3)//5\n1//ZZ(7)\nQQ(2//3)One can also construct the rational number 0 with the empty constructor:QQ()The following special constructors are also provided:zero(QQ)\none(QQ)zero(QQ)\none(QQ)"
 },
 
 {

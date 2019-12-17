@@ -3,7 +3,7 @@
 Rational Field
 
 julia&gt; QQ
-Rational Field</code></pre><h3><a class="nav-anchor" id="Integer-constructors-1" href="#Integer-constructors-1">Integer constructors</a></h3><p>Oscar rationals can be created using <code>QQ</code>. Two arguments can be passed to specify numerator and denominator. If a single argument is passed, the denominator is set to <code>1</code>.</p><p>For convenience, <code>QQ</code> also accepts Julia integers, but will always construct an Oscar rational.</p><p>Naturally, Julia&#39;s double slash operator can also be used to construct fractions. However, unlike <code>QQ</code>, the double slash operator only constructs an Oscar rational if either the numerator or denominator is an Oscar integer.</p><p>An exception is raised if a fraction is constructed with denominator zero.</p><pre><code class="language-julia-repl">julia&gt; QQ(1, 2)
+Rational Field</code></pre><h3><a class="nav-anchor" id="Integer-constructors-1" href="#Integer-constructors-1">Integer constructors</a></h3><p>Oscar rationals can be created using <code>QQ</code>. Two arguments can be passed to specify numerator and denominator. If a single argument is passed, the denominator is set to <code>1</code>.</p><p>For convenience, <code>QQ</code> also accepts Julia integers and rationals, but will always construct an Oscar rational.</p><p>Naturally, Julia&#39;s double slash operator can also be used to construct fractions. However, unlike <code>QQ</code>, the double slash operator only constructs an Oscar rational if either the numerator or denominator is an Oscar integer.</p><p>An exception is raised if a fraction is constructed with denominator zero.</p><pre><code class="language-julia-repl">julia&gt; QQ(1, 2)
 1//2
 
 julia&gt; QQ(5)
@@ -13,7 +13,10 @@ julia&gt; ZZ(3)//5
 3//5
 
 julia&gt; 1//ZZ(7)
-1//7</code></pre><p>One can also construct the rational number <span>$0$</span> with the empty constructor:</p><pre><code class="language-julia-repl">julia&gt; QQ()
+1//7
+
+julia&gt; QQ(2//3)
+2//3</code></pre><p>One can also construct the rational number <span>$0$</span> with the empty constructor:</p><pre><code class="language-julia-repl">julia&gt; QQ()
 0</code></pre><p>The following special constructors are also provided:</p><ul><li><code>zero(QQ)</code></li><li><code>one(QQ)</code></li></ul><pre><code class="language-julia-repl">julia&gt; zero(QQ)
 0
 
