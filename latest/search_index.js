@@ -17,7 +17,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#",
+    "location": "Rings/integer.html#",
     "page": "Integers",
     "title": "Integers",
     "category": "page",
@@ -25,7 +25,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Integers-1",
+    "location": "Rings/integer.html#Integers-1",
     "page": "Integers",
     "title": "Integers",
     "category": "section",
@@ -33,7 +33,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#The-ring-of-integers-1",
+    "location": "Rings/integer.html#The-ring-of-integers-1",
     "page": "Integers",
     "title": "The ring of integers",
     "category": "section",
@@ -41,7 +41,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Integer-constructors-1",
+    "location": "Rings/integer.html#Integer-constructors-1",
     "page": "Integers",
     "title": "Integer constructors",
     "category": "section",
@@ -49,7 +49,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Limitations-1",
+    "location": "Rings/integer.html#Limitations-1",
     "page": "Integers",
     "title": "Limitations",
     "category": "section",
@@ -57,7 +57,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Julia-integers-in-Oscar-functions-1",
+    "location": "Rings/integer.html#Julia-integers-in-Oscar-functions-1",
     "page": "Integers",
     "title": "Julia integers in Oscar functions",
     "category": "section",
@@ -65,7 +65,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Predicates-1",
+    "location": "Rings/integer.html#Predicates-1",
     "page": "Integers",
     "title": "Predicates",
     "category": "section",
@@ -73,7 +73,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Properties-1",
+    "location": "Rings/integer.html#Properties-1",
     "page": "Integers",
     "title": "Properties",
     "category": "section",
@@ -81,7 +81,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Basic-arithmetic-1",
+    "location": "Rings/integer.html#Basic-arithmetic-1",
     "page": "Integers",
     "title": "Basic arithmetic",
     "category": "section",
@@ -89,7 +89,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Division-in-Oscar-1",
+    "location": "Rings/integer.html#Division-in-Oscar-1",
     "page": "Integers",
     "title": "Division in Oscar",
     "category": "section",
@@ -97,7 +97,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#integer_exact_division-1",
+    "location": "Rings/integer.html#integer_exact_division-1",
     "page": "Integers",
     "title": "Exact Division",
     "category": "section",
@@ -105,7 +105,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Powering-1",
+    "location": "Rings/integer.html#Powering-1",
     "page": "Integers",
     "title": "Powering",
     "category": "section",
@@ -113,7 +113,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#integer_euclidean_division-1",
+    "location": "Rings/integer.html#integer_euclidean_division-1",
     "page": "Integers",
     "title": "Euclidean division",
     "category": "section",
@@ -121,7 +121,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Division-with-remainder-1",
+    "location": "Rings/integer.html#Division-with-remainder-1",
     "page": "Integers",
     "title": "Division with remainder",
     "category": "section",
@@ -129,7 +129,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Modular-arithmetic-1",
+    "location": "Rings/integer.html#Modular-arithmetic-1",
     "page": "Integers",
     "title": "Modular arithmetic",
     "category": "section",
@@ -137,7 +137,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Modular-reduction-1",
+    "location": "Rings/integer.html#Modular-reduction-1",
     "page": "Integers",
     "title": "Modular reduction",
     "category": "section",
@@ -145,7 +145,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#integer_divisibility_testing-1",
+    "location": "Rings/integer.html#integer_divisibility_testing-1",
     "page": "Integers",
     "title": "Divisibility testing",
     "category": "section",
@@ -153,7 +153,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Greatest-common-divisor-1",
+    "location": "Rings/integer.html#Greatest-common-divisor-1",
     "page": "Integers",
     "title": "Greatest common divisor",
     "category": "section",
@@ -161,7 +161,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Greatest-common-divisor-2",
+    "location": "Rings/integer.html#Greatest-common-divisor-2",
     "page": "Integers",
     "title": "Greatest common divisor",
     "category": "section",
@@ -169,7 +169,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Extended-GCD-1",
+    "location": "Rings/integer.html#Extended-GCD-1",
     "page": "Integers",
     "title": "Extended GCD",
     "category": "section",
@@ -177,7 +177,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Least-common-multiple-1",
+    "location": "Rings/integer.html#Least-common-multiple-1",
     "page": "Integers",
     "title": "Least common multiple",
     "category": "section",
@@ -185,7 +185,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Roots-1",
+    "location": "Rings/integer.html#Roots-1",
     "page": "Integers",
     "title": "Roots",
     "category": "section",
@@ -193,7 +193,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Square-roots-1",
+    "location": "Rings/integer.html#Square-roots-1",
     "page": "Integers",
     "title": "Square roots",
     "category": "section",
@@ -201,7 +201,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#General-roots-1",
+    "location": "Rings/integer.html#General-roots-1",
     "page": "Integers",
     "title": "General roots",
     "category": "section",
@@ -209,7 +209,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Conversions-1",
+    "location": "Rings/integer.html#Conversions-1",
     "page": "Integers",
     "title": "Conversions",
     "category": "section",
@@ -217,7 +217,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Factorisation-1",
+    "location": "Rings/integer.html#Factorisation-1",
     "page": "Integers",
     "title": "Factorisation",
     "category": "section",
@@ -225,7 +225,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Factorisation-are-iterable-1",
+    "location": "Rings/integer.html#Factorisation-are-iterable-1",
     "page": "Integers",
     "title": "Factorisation are iterable",
     "category": "section",
@@ -233,7 +233,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Accessing-exponents-in-a-factorisation-1",
+    "location": "Rings/integer.html#Accessing-exponents-in-a-factorisation-1",
     "page": "Integers",
     "title": "Accessing exponents in a factorisation",
     "category": "section",
@@ -241,7 +241,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Combinatorial-functions-1",
+    "location": "Rings/integer.html#Combinatorial-functions-1",
     "page": "Integers",
     "title": "Combinatorial functions",
     "category": "section",
@@ -249,7 +249,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Factorial-1",
+    "location": "Rings/integer.html#Factorial-1",
     "page": "Integers",
     "title": "Factorial",
     "category": "section",
@@ -257,7 +257,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Primorial-1",
+    "location": "Rings/integer.html#Primorial-1",
     "page": "Integers",
     "title": "Primorial",
     "category": "section",
@@ -265,7 +265,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Bell-numbers-1",
+    "location": "Rings/integer.html#Bell-numbers-1",
     "page": "Integers",
     "title": "Bell numbers",
     "category": "section",
@@ -273,7 +273,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Binomial-coefficients-1",
+    "location": "Rings/integer.html#Binomial-coefficients-1",
     "page": "Integers",
     "title": "Binomial coefficients",
     "category": "section",
@@ -281,7 +281,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Integer-partitions-1",
+    "location": "Rings/integer.html#Integer-partitions-1",
     "page": "Integers",
     "title": "Integer partitions",
     "category": "section",
@@ -289,7 +289,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Fibonacci-sequence-1",
+    "location": "Rings/integer.html#Fibonacci-sequence-1",
     "page": "Integers",
     "title": "Fibonacci sequence",
     "category": "section",
@@ -297,7 +297,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Number-theoretic-functionality-1",
+    "location": "Rings/integer.html#Number-theoretic-functionality-1",
     "page": "Integers",
     "title": "Number theoretic functionality",
     "category": "section",
@@ -305,7 +305,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Moebius-mu-function-1",
+    "location": "Rings/integer.html#Moebius-mu-function-1",
     "page": "Integers",
     "title": "Moebius mu function",
     "category": "section",
@@ -313,7 +313,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Jacobi-symbols-1",
+    "location": "Rings/integer.html#Jacobi-symbols-1",
     "page": "Integers",
     "title": "Jacobi symbols",
     "category": "section",
@@ -321,7 +321,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Sigma-function-1",
+    "location": "Rings/integer.html#Sigma-function-1",
     "page": "Integers",
     "title": "Sigma function",
     "category": "section",
@@ -329,7 +329,7 @@ var documenterSearchIndex = {"docs": [
 },
 
 {
-    "location": "integer.html#Euler-totient-function-1",
+    "location": "Rings/integer.html#Euler-totient-function-1",
     "page": "Integers",
     "title": "Euler totient function",
     "category": "section",
