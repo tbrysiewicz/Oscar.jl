@@ -336,4 +336,36 @@ var documenterSearchIndex = {"docs": [
     "text": "euler_phi(n::Base.Int) -> Base.Int\neuler_phi(n::Oscar.Integer) -> Oscar.IntegerReturn the Euler totient function varphi(n), i.e. the number of positive integers 1 leq x leq n which are coprime to n. Note that varphi(1) = 1. We raise an exception if n leq 0.euler_phi(200)"
 },
 
+{
+    "location": "Rings/rational.html#",
+    "page": "Rationals",
+    "title": "Rationals",
+    "category": "page",
+    "text": "CurrentModule = Oscarusing OscarPages = [\"rational.md\"]"
+},
+
+{
+    "location": "Rings/rational.html#Rationals-1",
+    "page": "Rationals",
+    "title": "Rationals",
+    "category": "section",
+    "text": "Fractions are created in Julia with the double slash operator //. If a fraction is created from Julia integers, a Julia fraction results and if either the numerator or denominator is an Oscar integer, an Oscar fraction results.Oscar has just a single rational fraction type Oscar.fmpq. The Oscar fraction type belongs to Oscar.Rational.Julia has a parameterised type Base.Rational{T} for its own fractions, where T is the integer type the fractions are constructed from, e.g. Base.Rational{Int} and Base.Rational{BigInt}.Note that conveniently, both of these Julia rational types belong to Base.Rational. Therefore in the description below we refer to Oscar.Rational for Oscar rational numbers and Base.Rational for any of the Julia rational number types.The situation is described by the following diagram.(Image: alt text)"
+},
+
+{
+    "location": "Rings/rational.html#The-field-of-rationals-1",
+    "page": "Rationals",
+    "title": "The field of rationals",
+    "category": "section",
+    "text": "The parent of an Oscar rational number is the field of rationals. It can be constructed from the ring of integers ZZ using the FractionField constructor.For convenience, QQ is already defined to be the field of rationals numbers.S = FractionField(ZZ)\nQQ"
+},
+
+{
+    "location": "Rings/rational.html#Integer-constructors-1",
+    "page": "Rationals",
+    "title": "Integer constructors",
+    "category": "section",
+    "text": "Oscar rationals can be created using QQ. Two arguments can be passed to specify numerator and denominator. If a single argument is passed, the denominator is set to 1.For convenience, QQ also accepts Julia integers, but will always construct an Oscar rational.Naturally, Julia\'s double slash operator can also be used to construct fractions. However, unlike QQ, the double slash operator only constructs an Oscar rational if either the numerator or denominator is an Oscar integer.An exception is raised if a fraction is constructed with denominator zero.QQ(1, 2)\nQQ(5)\nZZ(3)//5\n1//ZZ(7)One can also construct the rational number 0 with the empty constructor:QQ()The following special constructors are also provided:zero(QQ)\none(QQ)"
+},
+
 ]}
