@@ -381,7 +381,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Rationals",
     "title": "Properties",
     "category": "section",
-    "text": "numerator(n::Oscar.Rational) -> Oscar.Integer\ndenominator(n::Oscar.Rational) -> Oscar.IntegerReturn the numerator and denominator respectively, of n.sign(n::Oscar.Rational) -> Oscar.RationalReturns the sign of n, i.e. nn if n neq 0, or 0 otherwise.sign(QQ(2, 3))\nsign(QQ())\nsign(QQ(-1))abs(n::Oscar.Rational) -> Oscar.RationalReturn the absolute value of n, i.e. n if n geq 0 and -n otherwiseabs(QQ(-3, 2))height(n::Oscar.Rational) -> Oscar.Integer`Return the maximum of the absolute values of the numerator and denominator of n.height(QQ(324987329, -8372492324))"
+    "text": "numerator(n::Oscar.Rational) -> Oscar.Integer\ndenominator(n::Oscar.Rational) -> Oscar.IntegerReturn the numerator and denominator respectively, of n.sign(n::Oscar.Rational) -> Oscar.RationalReturns the sign of n, i.e. nn if n neq 0, or 0 otherwise.sign(QQ(2, 3))\nsign(QQ())\nsign(QQ(-1))abs(n::Oscar.Rational) -> Oscar.RationalReturn the absolute value of n, i.e. n if n geq 0 and -n otherwise.abs(QQ(-3, 2))height(n::Oscar.Rational) -> Oscar.IntegerReturn the maximum of the absolute values of the numerator and denominator of n.height(QQ(324987329, -8372492324))floor(n::Oscar.Rational) -> Oscar.RationalReturn the greatest integer m such that m leq n.ceil(n::Oscar.Rational) -> Oscar.RationalReturn the least integer m such that m geq n.floor(QQ(-2, 3))\nceil(QQ(7, 2))\nceil(QQ(5))"
 },
 
 ]}

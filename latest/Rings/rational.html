@@ -50,6 +50,13 @@ Closest candidates are:
   sign(!Matched::Nemo.fmpz) at /home/travis/.julia/packages/Nemo/5aSWJ/src/flint/fmpz.jl:160
   sign(!Matched::Missing) at missing.jl:79
   sign(!Matched::Bool) at bool.jl:90
-  ...</code></pre><ul><li><code>abs(n::Oscar.Rational) -&gt; Oscar.Rational</code></li></ul><p>Return the absolute value of <span>$n$</span>, i.e. <span>$n$</span> if <span>$n \geq 0$</span> and <span>$-n$</span> otherwise</p><pre><code class="language-julia-repl">julia&gt; abs(QQ(-3, 2))
-3//2</code></pre><ul><li>height(n::Oscar.Rational) -&gt; Oscar.Integer`</li></ul><p>Return the maximum of the absolute values of the numerator and denominator of <span>$n$</span>.</p><pre><code class="language-julia-repl">julia&gt; height(QQ(324987329, -8372492324))
-8372492324</code></pre><footer><hr/><a class="previous" href="integer.html"><span class="direction">Previous</span><span class="title">Integers</span></a></footer></article></body></html>
+  ...</code></pre><ul><li><code>abs(n::Oscar.Rational) -&gt; Oscar.Rational</code></li></ul><p>Return the absolute value of <span>$n$</span>, i.e. <span>$n$</span> if <span>$n \geq 0$</span> and <span>$-n$</span> otherwise.</p><pre><code class="language-julia-repl">julia&gt; abs(QQ(-3, 2))
+3//2</code></pre><ul><li><code>height(n::Oscar.Rational) -&gt; Oscar.Integer</code></li></ul><p>Return the maximum of the absolute values of the numerator and denominator of <span>$n$</span>.</p><pre><code class="language-julia-repl">julia&gt; height(QQ(324987329, -8372492324))
+8372492324</code></pre><ul><li><code>floor(n::Oscar.Rational) -&gt; Oscar.Rational</code></li></ul><p>Return the greatest integer <span>$m$</span> such that <span>$m \leq n$</span>.</p><ul><li><code>ceil(n::Oscar.Rational) -&gt; Oscar.Rational</code></li></ul><p>Return the least integer <span>$m$</span> such that <span>$m \geq n$</span>.</p><pre><code class="language-julia-repl">julia&gt; floor(QQ(-2, 3))
+-1
+
+julia&gt; ceil(QQ(7, 2))
+4
+
+julia&gt; ceil(QQ(5))
+5</code></pre><footer><hr/><a class="previous" href="integer.html"><span class="direction">Previous</span><span class="title">Integers</span></a></footer></article></body></html>
