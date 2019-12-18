@@ -384,4 +384,20 @@ var documenterSearchIndex = {"docs": [
     "text": "numerator(n::Oscar.Rational) -> Oscar.Integer\ndenominator(n::Oscar.Rational) -> Oscar.IntegerReturn the numerator and denominator respectively, of n.sign(n::Oscar.Rational) -> Oscar.RationalReturns the sign of n, i.e. nn if n neq 0, or 0 otherwise.sign(QQ(2, 3))\nsign(QQ())\nsign(QQ(-1))abs(n::Oscar.Rational) -> Oscar.RationalReturn the absolute value of n, i.e. n if n geq 0 and -n otherwise.abs(QQ(-3, 2))height(n::Oscar.Rational) -> Oscar.IntegerReturn the maximum of the absolute values of the numerator and denominator of n.height(QQ(324987329, -8372492324))floor(n::Oscar.Rational) -> Oscar.RationalReturn the greatest integer m such that m leq n.ceil(n::Oscar.Rational) -> Oscar.RationalReturn the least integer m such that m geq n.floor(QQ(-2, 3))\nceil(QQ(7, 2))\nceil(QQ(5))"
 },
 
+{
+    "location": "Rings/rational.html#Basic-arithmetic-1",
+    "page": "Rationals",
+    "title": "Basic arithmetic",
+    "category": "section",
+    "text": "Oscar provides the basic arithmetic operations +, - and * and comparison operators ==, !=, <, <=, >, >=, including mixed operations between Julia and Oscar rationals and integers."
+},
+
+{
+    "location": "Rings/rational.html#[Exact-Division]-1",
+    "page": "Rationals",
+    "title": "[Exact Division]",
+    "category": "section",
+    "text": "divexact(a::Oscar.Rational, b::Oscar.Rational) -> Oscar.Rational\ndivexact(a::Oscar.Rational, b::Oscar.Integer) -> Oscar.Rational\ndivexact(a::Oscar.Integer, b::Oscar.Rational) -> Oscar.RationalIn the first signature, one of the arguments may be a Julia rational and in the other two signatures the integers may be Julia integers.Returns the quotient of a by b. Exact division raises an exception if division by zero is attempted.divexact(QQ(2, 3), QQ(3, 5))\ndivexact(QQ(1, 3), ZZ(0))\ndivexact(QQ(3, 4), ZZ(5))\ndivexact(ZZ(6), QQ(2, 3))\ndivexact(QQ(1, 3), 5)"
+},
+
 ]}
