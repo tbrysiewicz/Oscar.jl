@@ -376,4 +376,12 @@ var documenterSearchIndex = {"docs": [
     "text": "iszero(n::Oscar.Rational) -> Bool\nisone(n::Oscar.Rational) -> Bool\nisunit(n::Oscar.Rational) -> BoolThe isunit function will return true iff n neq 0.iszero(QQ())\nisone(one(QQ))\nisunit(QQ(-2, 3))"
 },
 
+{
+    "location": "Rings/rational.html#Properties-1",
+    "page": "Rationals",
+    "title": "Properties",
+    "category": "section",
+    "text": "numerator(n::Oscar.Rational) -> Oscar.Integer\ndenominator(n::Oscar.Rational) -> Oscar.IntegerReturn the numerator and denominator respectively, of n.sign(n::Oscar.Rational) -> Oscar.RationalReturns the sign of n, i.e. nn if n neq 0, or 0 otherwise.sign(QQ(2, 3))\nsign(QQ())\nsign(QQ(-1))abs(n::Oscar.Rational) -> Oscar.RationalReturn the absolute value of n, i.e. n if n geq 0 and -n otherwiseabs(QQ(-3, 2))"
+},
+
 ]}
