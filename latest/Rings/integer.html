@@ -30,7 +30,7 @@ julia&gt; issquare(ZZ(16))
 true
 
 julia&gt; isprobable_prime(ZZ(23))
-true</code></pre><h2><a class="nav-anchor" id="Properties-1" href="#Properties-1">Properties</a></h2><ul><li><code>sign(n::Oscar.Integer) -&gt; Base.Int</code></li></ul><p>Returns the sign of <code>n</code>, i.e. <span>$n/|n|$</span> if <span>$n \neq 0$</span>, or <span>$0$</span> otherwise.</p><pre><code class="language-julia-repl">julia&gt; sign(ZZ(23))
+true</code></pre><h2><a class="nav-anchor" id="Properties-1" href="#Properties-1">Properties</a></h2><ul><li><code>sign(n::Oscar.Integer) -&gt; Oscar.Integer</code></li></ul><p>Returns the sign of <code>n</code>, i.e. <span>$n/|n|$</span> if <span>$n \neq 0$</span>, or <span>$0$</span> otherwise.</p><pre><code class="language-julia-repl">julia&gt; sign(ZZ(23))
 1
 
 julia&gt; sign(ZZ(0))

@@ -77,7 +77,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Properties",
     "category": "section",
-    "text": "sign(n::Oscar.Integer) -> Base.IntReturns the sign of n, i.e. nn if n neq 0, or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))abs(n::Oscar.Integer) -> Oscar.IntegerReturn the absolute value of n, i.e. n if n geq 0 and -n otherwiseabs(ZZ(-3))"
+    "text": "sign(n::Oscar.Integer) -> Oscar.IntegerReturns the sign of n, i.e. nn if n neq 0, or 0 otherwise.sign(ZZ(23))\nsign(ZZ(0))\nsign(ZZ(-1))abs(n::Oscar.Integer) -> Oscar.IntegerReturn the absolute value of n, i.e. n if n geq 0 and -n otherwiseabs(ZZ(-3))"
 },
 
 {
@@ -398,6 +398,14 @@ var documenterSearchIndex = {"docs": [
     "title": "[Exact Division]",
     "category": "section",
     "text": "divexact(a::Oscar.Rational, b::Oscar.Rational) -> Oscar.Rational\ndivexact(a::Oscar.Rational, b::Oscar.Integer) -> Oscar.Rational\ndivexact(a::Oscar.Integer, b::Oscar.Rational) -> Oscar.RationalIn the first signature, one of the arguments may be a Julia rational and in the other two signatures the integers may be Julia integers.Returns the quotient of a by b. Exact division raises an exception if division by zero is attempted.divexact(QQ(2, 3), QQ(3, 5))\ndivexact(QQ(1, 3), ZZ(0))\ndivexact(QQ(3, 4), ZZ(5))\ndivexact(ZZ(6), QQ(2, 3))\ndivexact(QQ(1, 3), 5)"
+},
+
+{
+    "location": "Rings/rational.html#Powering-1",
+    "page": "Rationals",
+    "title": "Powering",
+    "category": "section",
+    "text": "^(a::Oscar.Rational, b::Base.Int) -> Oscar.RationalPowering can be accomplished naturally using the special caret infix operator:QQ(5, 7)^32\nQQ(1, 2)^(-2)The following is allowed for convenience.QQ(0)^0note: Note\nIn line with Julia, the rational number 0 when raised to a negative power returns 1."
 },
 
 ]}

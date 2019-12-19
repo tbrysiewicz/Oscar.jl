@@ -75,4 +75,9 @@ julia&gt; divexact(ZZ(6), QQ(2, 3))
 9
 
 julia&gt; divexact(QQ(1, 3), 5)
-1//15</code></pre><footer><hr/><a class="previous" href="integer.html"><span class="direction">Previous</span><span class="title">Integers</span></a></footer></article></body></html>
+1//15</code></pre><h3><a class="nav-anchor" id="Powering-1" href="#Powering-1">Powering</a></h3><ul><li><code>^(a::Oscar.Rational, b::Base.Int) -&gt; Oscar.Rational</code></li></ul><p>Powering can be accomplished naturally using the special caret infix operator:</p><pre><code class="language-julia-repl">julia&gt; QQ(5, 7)^32
+23283064365386962890625//1104427674243920646305299201
+
+julia&gt; QQ(1, 2)^(-2)
+4</code></pre><p>The following is allowed for convenience.</p><pre><code class="language-julia-repl">julia&gt; QQ(0)^0
+1</code></pre><div class="admonition note"><div class="admonition-title">Note</div><div class="admonition-text"><p>In line with Julia, the rational number <span>$0$</span> when raised to a negative power returns <span>$1$</span>.</p></div></div><footer><hr/><a class="previous" href="integer.html"><span class="direction">Previous</span><span class="title">Integers</span></a></footer></article></body></html>
