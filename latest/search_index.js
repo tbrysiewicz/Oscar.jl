@@ -109,7 +109,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Integers",
     "title": "Powering",
     "category": "section",
-    "text": "^(a::Oscar.Integer, b::Base.Int) -> Oscar.IntegerPowering can be accomplished naturally using the special caret infix operator:ZZ(37)^37\nZZ(1)^(-2)note: Note\nAn exception will be raised if an integer other than -1 or 1 is raised to a negative exponent.The following is allowed for convenience.ZZ(0)^0note: Note\nIn Julia, 2^64 will return zero, as the Julia integer 2 is a machine integer. In Oscar, the expression ZZ(2)^64 will return the expected result, just as the Julia equivalent BigInt(2)^64 does."
+    "text": "^(a::Oscar.Integer, b::Base.Int) -> Oscar.IntegerPowering can be accomplished naturally using the special caret infix operator:ZZ(37)^37\nZZ(1)^(-2)note: Note\nAn exception will be raised if an integer other than -1 or 1 is raised to a negative exponent.note: Note\nIn Julia 2^-2 is called a literal power. The value returned is a floating point value. To get behaviour that agrees with Oscar, one can write 2^Int(-2).The following is allowed for convenience.ZZ(0)^0note: Note\nIn Julia, 2^64 will return zero, as the Julia integer 2 is a machine integer. In Oscar, the expression ZZ(2)^64 will return the expected result, just as the Julia equivalent BigInt(2)^64 does."
 },
 
 {
@@ -405,7 +405,7 @@ var documenterSearchIndex = {"docs": [
     "page": "Rationals",
     "title": "Powering",
     "category": "section",
-    "text": "^(a::Oscar.Rational, b::Base.Int) -> Oscar.RationalPowering can be accomplished naturally using the special caret infix operator:QQ(5, 7)^32\nQQ(1, 2)^(-2)The following is allowed for convenience.QQ(0)^0note: Note\nIn line with Julia, the rational number 0 when raised to a negative power returns 1."
+    "text": "^(a::Oscar.Rational, b::Base.Int) -> Oscar.RationalPowering can be accomplished naturally using the special caret infix operator:QQ(5, 7)^32\nQQ(1, 2)^(-2)The following is allowed for convenience.QQ(0)^0note: Note\nIn Julia, the rational number 01 when raised to a negative power returns 10 to indicate that the value is undefined. Oscar raises an exception.QQ(0)^-2"
 },
 
 ]}
