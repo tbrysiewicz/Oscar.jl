@@ -150,6 +150,9 @@
         for p = 1:6
           push!(Hom_FreeModElems, Hom_FreeModElemst[order_new[p]])
         end
+        @show order_new
+        h = [ collect(keys(homogenous_components(F.R(Pols[s])))) for s in 1:6]
+        @show [ length(g) for g in h]
         hom_keys = [collect(keys(homogenous_components(F.R(Pols[s]))))[1] for s = 1:6]
         hom_pols = [homogenous_component(F.R(Pols[s]), hom_keys[s]) for s = 1:6]
         SubQuos = [sub(F, [Hom_FreeModElems[e] for e = 1:3]), quo(F, [Hom_FreeModElems[2*e-1] for e = 1:3])]
