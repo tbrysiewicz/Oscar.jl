@@ -12,7 +12,13 @@ import Documenter.Utilities: Selectors
 using Documenter.Builder
 import Documenter.Builder: SetupBuildDirectory, walk_navpages
 import Documenter.Documents: Document, Page
+#=
+ copied from Documenter (0.26.1)
 
+ Adds the loop to collect the AA/Nemo/Hecke doc files into the 
+ build tree of Oscar.
+
+=# 
 function Selectors.runner(::Type{SetupBuildDirectory}, doc::Documents.Document)
     @info "SetupBuildDirectory: setting up build directory."
 
@@ -64,6 +70,11 @@ function Selectors.runner(::Type{SetupBuildDirectory}, doc::Documents.Document)
         end
     end
 
+    #= essentially a copy of above, but reading the extra repositories
+       and normalizing the paths suitably.
+       only `.md` files are copied. There is/was a clash in the other
+       files (icons, graphics, ...)
+    =#
     for extra in ["Hecke", "Nemo", "AbstractAlgebra"]
         for (root, dirs, files) in walkdir(normpath(joinpath(dirname(pathof(getproperty(Main, Symbol(extra)))), "..", "docs", "src")))
             for dir in dirs
@@ -117,6 +128,7 @@ function Selectors.runner(::Type{SetupBuildDirectory}, doc::Documents.Document)
     end
 end
 
+# new signature: trunc is added to sanitize paths (truncate)
 function Documenter.Documents.addpage!(doc::Document, src::AbstractString, dst::AbstractString, wd::AbstractString, trunc::AbstractString)
     page = Page(src, dst, wd)
     # page's identifier is the path relative to the `doc.user.source` directory
