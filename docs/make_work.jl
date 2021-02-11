@@ -12,6 +12,7 @@ import Documenter.Utilities: Selectors
 using Documenter.Builder
 import Documenter.Builder: SetupBuildDirectory, walk_navpages
 import Documenter.Documents: Document, Page
+
 #=
  copied from Documenter (0.26.1)
 
